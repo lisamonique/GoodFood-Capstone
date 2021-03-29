@@ -4,6 +4,30 @@
     box-sizing: border-box;
 }
 
+body{
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gardenPic {
+  text-align: center;
+  color:whitesmoke;
+  line-height: 900px;
+}
+
+.garden { 
+  height: 75vh;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://www.pennington.com/-/media/Images/Pennington2-NA/US/blog/fertilizer/How-to-grow-an-organic-vegetable-garden/Bunch-of-fresh-veggies-h.jpg?h=480&la=en&w=1140&hash=B86177ADDF67F3E8659716962AE1AE98CA05E5A3");
+}
+
 .header {
     padding: 10px 16px;
     background: #08BDBD;
@@ -47,4 +71,56 @@
   .fa-instagram {
     background: none;
     color:black;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  background-color: DodgerBlue;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+
+.options {
+  border-radius: 1.2em;
+  background-color: #540d6e;
+  width: 100vh;
+  min-height: 50vh;
+  margin: 50px;
+  color: whitesmoke;
+  text-align: center;
+  line-height: 175px;
+  font-size: 45px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(204, 48, 243, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.square1, .square2 {
+  border-radius: 0.5em;
+  background: white;
+  background-color: #540d6e;
+  width: 30vh;
+  height: 25vh;
+  background: linear-gradient(
+    to right bottom,
+    rgba(204, 48, 243, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  position: absolute;
+}
+
+.square1 {
+  top: 50%;
+  right: 25%;
+}
+.square2 {
+  bottom: 15%;
+  left: 25%;
+}
+
+.summary {
+  display: grid;
 }

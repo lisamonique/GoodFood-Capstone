@@ -8,11 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - GoodFood</title>
+    <link rel="stylesheet" href="{% static 'users/style.css' %}">
 </head>
 
 <body>
-    <div>
-        <a href="{% url 'plants:index' %}">Homepage</a>
+    <div class="back">
+        <a href="{% url 'plants:index' %}">Homepage</a>    
+    </div>
+
+    <div class="content">
         {% if error %}
         {{error}}
         {% endif %}

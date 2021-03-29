@@ -19,13 +19,7 @@
 
     {% for data in database %}
     <h3>{{data.veggie_question}}</h3>
-    <h4>{{data.veggie_answer}}</h4>
     {% endfor %}
-
-    <div>
-      <h3>[[quiz.question]]</h3>
-    </div>
-
 
     <div id="app">
         <select v-model="amount" name="amount" id="amount">
