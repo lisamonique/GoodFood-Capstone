@@ -1,3 +1,4 @@
+from django.http.response import JsonResponse
 import json
 from django.shortcuts import render
 from .models import Question, Answer
@@ -15,5 +16,13 @@ def veggieGameData(request):
     }
     return render(request, 'vegetableGame/game.html', context)
 
-# def getQuiz(request):
+def getQuiz(request):
+    quizzes = Question.objects.all()
+    
+    response = {'data': []}
+    for quiz in quizzes:
+        response['data'].append({
+            'veggie_question': quiz.question
+        })
+    return JsonResponse(response)
 

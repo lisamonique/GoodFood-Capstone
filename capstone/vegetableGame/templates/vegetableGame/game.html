@@ -12,16 +12,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
         crossorigin="anonymous"></script>
-    <script defer src="main.js"></script>
+    <script defer src="{% static 'vegetableGame/main.js' %}"></script>
 </head>
 <body>
     <a href="{% url 'plants:index' %}">HomePage</a>
-    
+
     {% for data in database %}
     <h3>{{data.veggie_question}}</h3>
     <h4>{{data.veggie_answer}}</h4>
-    <h5>{{data.answers}}</h5> 
     {% endfor %}
+
+    <div>
+      <h3>[[quiz.question]]</h3>
+    </div>
+
 
     <div id="app">
         <select v-model="amount" name="amount" id="amount">
@@ -33,12 +37,7 @@
         </select>
         <button v-on:click="getQuiz">Generate Quiz</button>
     </div>
-    <div class="quiz">
-        <div v-for="question of questions" class="question">
-            <div>
 
-            </div>
-        </div>
     </div>
     <article class="flashcard">
         <input id="flashcard-1" type="checkbox" />
