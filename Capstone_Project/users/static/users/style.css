@@ -1,18 +1,7 @@
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.login .register {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("https://media.istockphoto.com/photos/healthy-fresh-rainbow-colored-fruits-and-vegetables-background-picture-id1208790371?k=6&m=1208790371&s=612x612&w=0&h=FCAj7paMmtAYe4W-8j12fSh9fe2Uf1yt7CItAzMNLTA=");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .message {
@@ -45,4 +34,116 @@
     padding: 0.5em;
     text-align: left;
     font-size: 20px;
+}
+
+.header {
+    padding: 10px 16px;
+    background: #08BDBD;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  .fa-twitter {
+    background: none;
+    color:black;
+  }
+  
+  .fa-youtube {
+    background: none;
+    color:black;
+  }
+  
+  .fa-instagram {
+    background: none;
+    color:black;
+}
+
+  .fa-facebook {
+    background-color: none;
+    color: black;
+  }
+
+.content {
+display: flex;
+justify-content: center;
+background-color: DodgerBlue;
+background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+
+.options {
+  border-radius: 1.2em;
+  background-color: #540d6e;
+  width: 100vh;
+  min-height: 50vh;
+  margin: 50px;
+  color: whitesmoke;
+  text-align: center;
+  line-height: 175px;
+  font-size: 45px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(204, 48, 243, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.square1, .square2 {
+  border-radius: 0.5em;
+  background: white;
+  background-color: #540d6e;
+  width: 30vh;
+  height: 25vh;
+  background: linear-gradient(
+    to right bottom,
+    rgba(204, 48, 243, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  /* position: absolute; */
+}
+
+.square1 {
+  top: 50%;
+  right: 25%;
+}
+.square2 {
+  bottom: 15%;
+  left: 25%;
+}
+
+.summary {
+  display: grid;
+}
+
+.loginregister{
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://media.istockphoto.com/photos/healthy-fresh-rainbow-colored-fruits-and-vegetables-background-picture-id1208790371?k=6&m=1208790371&s=612x612&w=0&h=FCAj7paMmtAYe4W-8j12fSh9fe2Uf1yt7CItAzMNLTA=");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }

@@ -1,17 +1,31 @@
-{% extends 'plants/base.html' %}
+{% extends 'users/base.html' %}
 
-{% block plants %}
+{% block users %}
 <div>
    {% if user.is_authenticated %}
-        <a href="{% url 'logout_user' %}">logout</a>    
-        <h1>Welcome {{ user }} Glad to See You Again!</h1>
-        <hr>
+    <a href="{% url 'logout_user' %}">logout</a>    
+    <h1>Welcome {{ user }} Glad to See You Again!</h1>
+    <hr>
+    <div class="content">
+        <section class="square1">
+
+        </section>
         <section class="options">
-            <h3>Veggie Quiz?</h3>
-            <p>I'll record your scores here since you are logged in!</p>
+            <p>Wanna Play?</p>
             <a href="{% url 'vegetableGame:veggieGameData' %}">CLICK ME</a>
         </section>
+        <section class="options">
+            <p>Learn More ---></p>
+            <p>Quiz <---</p>
+        </section>
+        <section class="options">
+            <p>Fruits & Vegetables</p>
+            <a href="{% url 'gardenPlot:index' %}">CLICK ME</a>
+        </section>
+        <section class="square2">
 
+        </section>
+    </div>
     {% else %}
     <a href="{% url 'login_user' %}">Login</a>
     <a href="{% url 'register' %}">Sign Up</a>

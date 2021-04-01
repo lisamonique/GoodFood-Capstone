@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Plot</title>
+    <!-- Vue -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.common.dev.min.js"
+        integrity="sha512-PkyFg1MEb/EwsFAqzqvZqWdMT4ItV+E1NgOtfBC9X8UecJcO9bwirD+v/9tJwci4wTNHdNYBk4ev6ceb1hy73g=="
+        crossorigin="anonymous"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link rel="stylesheet" href="{% static 'gardenPlot/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="{% static 'gardenPlot/main.js' %}"></script>
+</head>
+<body>
+    <div class="header" id="myHeader">
+        <h1>Header: {{ message }}</h1>
+        <div class="topNav">
+            <nav class="navBar">
+                <a href="{% url 'plants:index' %}">Home</a>
+                <a href="#">YouTube</a>
+                <a href="{% url 'plants:aboutPage' %}">About</a>
+                <a href="{% url 'login_user' %}">Member Login</a>
+                <a href="{% url 'register' %}">Join Us</a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                </nav>
+        </div>
+    </div>
+
+    <label>Choose a Fruit or Vegetable: </label>
+            <select multiple>
+                <option v-for="fruit in fruits" disabled placeholder="Please select one">{{fruit}}</option>
+                <!-- <option value="apple">Apple</option>
+                <option value="orange">Orange</option>
+                <option value="squash">Squash</option>
+                <option value="beets">Beets</option> -->
+            </select>
+        <input type="submit" name="submit" id="submit">
+
+    <div class="plot">
+        <h2>Create A Garden</h2>
+        <h3>Select Fruits or Vegetable</h3>
+        <p>Watch your seeds blossom into plants!</p>
+
+        <table id="app" class="innerplot">
+        <tr class="row1">
+            <td>Spot1<img id="hangman-image" src="#"></td>
+            <td>Spot2<img id="hangman-image" src="#"></td>
+            <td>Spot3<img id="hangman-image" src="#"></td>
+            <td>Spot4<img id="hangman-image" src="#"></td>
+            <td>Spot5<img id="hangman-image" src="#"></td>
+        </tr>
+        <tr class="row2">
+            <td>Spot6<img id="hangman-image" src="#"></td>
+            <td>Spot7<img id="hangman-image" src="#"></td>
+            <td>Spot8<img id="hangman-image" src="#"></td>
+            <td>Spot9<img id="hangman-image" src="#"></td>
+            <td>Spot10<img id="hangman-image" src="#"></td>
+        </tr>
+        <tr class="row3">
+            <td>Spot11<img id="hangman-image" src="#"></td>
+            <td>Spot12<img id="hangman-image" src="#"></td>
+            <td>Spot13<img id="hangman-image" src="#"></td>
+            <td>Spot14<img id="hangman-image" src="#"></td>
+            <td>Spot15<img id="hangman-image" src="#"></td>
+        </tr>
+        <tr class="row4">
+            <td>Spot16<img id="hangman-image" src="#"></td>
+            <td>Spot17<img id="hangman-image" src="#"></td>
+            <td>Spot18<img id="hangman-image" src="#"></td>
+            <td>Spot19<img id="hangman-image" src="#"></td>
+            <td>Spot20<img id="hangman-image" src="#"></td>
+        </tr>
+    </table>
+    </div>
+
+    
+    
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            } else {
+            header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>

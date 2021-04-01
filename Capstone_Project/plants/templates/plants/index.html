@@ -1,7 +1,7 @@
 {% extends 'plants/base.html' %}
 
 {% block plants %}
-<body class="index">
+<body>
     <div class="gardenPic">
         <h2 class="garden">Picture of Vegetables</h2>    
     </div>
@@ -20,7 +20,7 @@
         </section>
         <section class="options">
             <p>Fruits & Vegetables</p>
-            <a href="#">CLICK ME</a>
+            <a href="{% url 'gardenPlot:index' %}">CLICK ME</a>
         </section>
         <section class="square2">
 
@@ -89,7 +89,7 @@
         <hr>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
         <hr>
-        <img class="tree" src="/images/guessing-game.png" alt="Tree">
+        <img class="tree" src="https://picsum.photos/200/300" alt="picsum image">
     </div>
 </body>
 <footer>Footer: {{ message }}</footer>

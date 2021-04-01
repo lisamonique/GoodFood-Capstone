@@ -4,18 +4,18 @@
   padding: 0px;
   box-sizing: border-box;
 }
-.html,
-.vegetableGame {
-  background: #e9de43;
+html,
+body {
+  background: #474749;
   border: 0px;
   width: 100%;
   height: 100%;
 }
-.html {
+body {
   padding: 50px;
   display: table;
 }
-.vegetableGame {
+html {
   display: table-cell;
   vertical-align: middle;
 }
@@ -59,4 +59,55 @@ article.flashcard section.back {
   color: #ddd;
   background: #c85073;
   height: 0%;
+}
+
+
+.header {
+  padding: 10px 16px;
+  background: #08BDBD;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  background: none;
+  color:black;
+}
+
+.fa-youtube {
+  background: none;
+  color:black;
+}
+
+.fa-instagram {
+  background: none;
+  color:black;
+}
+
+.fa-facebook {
+  background-color: none;
+  color: black;
 }

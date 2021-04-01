@@ -12,6 +12,7 @@ def veggieGameData(request):
     quiz_answer = Answer.objects.all()
 
     context = {
+        "message": "Welcome to GoodFood-(veggieGameData.view)",
         "quiz_question": quiz_question,
         "quiz_answer": quiz_answer
     }

@@ -5,12 +5,12 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        'message': 'Welcome to GoodFood'
+        'message': 'Welcome to GoodFood Index(index.view)'
     }
     return render(request, 'plants/index.html', context)
 
 def aboutPage(request):
     context = {
-        "message": "GoodFood Mission"
+        "message": "GoodFood Mission(aboutPage.view)"
     }
     return render(request, 'plants/about.html', context)

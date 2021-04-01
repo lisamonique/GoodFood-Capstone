@@ -73,6 +73,11 @@ body{
     color:black;
 }
 
+  .fa-facebook {
+    background-color: none;
+    color: black;
+  }
+
 .content {
   display: flex;
   justify-content: center;

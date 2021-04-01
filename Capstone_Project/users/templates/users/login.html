@@ -1,8 +1,8 @@
-{% extends 'plants/base.html' %}
+{% extends 'users/base.html' %}
 
-{% block plants %}
-<body class="login">
-    <div class="content">
+{% block users %}
+<body class="loginregister">
+    <div class="content" >
         {% if error %}
         {{error}}
         {% endif %}
@@ -12,6 +12,6 @@
             <input type="password" name="password" placeholder="Password: ">
             <input type="submit" value="Login">
         </form>
-    </div>
+    </div>  
 </body>
 {% endblock %}
