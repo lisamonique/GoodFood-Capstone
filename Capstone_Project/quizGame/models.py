@@ -14,10 +14,11 @@ class Question(models.Model):
 
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
-
+        return self.veggie_answer
 
 class Answer(models.Model):
-    veggie_answer = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="answer")
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="answers")
+    veggie_answer = models.CharField(max_length=200)
     answers = models.BooleanField(default=True)
 
     def __str__(self):
