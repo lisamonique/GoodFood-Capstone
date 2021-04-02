@@ -8,11 +8,11 @@ from .models import Question, Answer
 
 
 def veggieGameData(request):
-    quiz_question = Question.objects.order_by('-pub_date')
+    quiz_question = Question.objects.order_by('pub_date')
     quiz_answer = Answer.objects.all()
 
     context = {
-        "message": "Welcome to GoodFood-(veggieGameData.view)",
+        "message": "Welcome to Vegetable Game",
         "quiz_question": quiz_question,
         "quiz_answer": quiz_answer
     }
@@ -25,12 +25,6 @@ def getQuiz(request):
     quiz = Question()
     quiz.veggie_question = form['veggie_question']
     quiz.save()
-
-    return HttpResponseRedirect(reverse('veggieGameData'))
-
-def getQuizAnswer(request, id): 
-    
-    pass
 
     return HttpResponseRedirect(reverse('veggieGameData'))
     

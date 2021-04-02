@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'plants',
     'vegetableGame',
     'users',
-    'gardenPlot'
+    'gardenPlot',
+    'quizGame'
 ]
 
 MIDDLEWARE = [

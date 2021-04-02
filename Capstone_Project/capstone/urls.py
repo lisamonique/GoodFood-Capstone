@@ -21,5 +21,6 @@ urlpatterns = [
     path('plants/', include('plants.urls')),
     path('vegetableGame/', include('vegetableGame.urls')),
     path('users/', include('users.urls')),
-    path('gardenPlot/', include('gardenPlot.urls'))
+    path('gardenPlot/', include('gardenPlot.urls')),
+    path('quizGame/', include('quizGame.urls'))
 ]

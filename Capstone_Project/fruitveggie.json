@@ -5,7 +5,7 @@
       "veggie_question": "Name a fruit that starts with 'A'. It is white on the inside and can be red, yellow, or green on the outside.",
       "veggie_answer": "Apple",
       "answers": [
-        "correct",
+        "Apple",
         "incorrect"
       ]
     },
@@ -15,7 +15,7 @@
       "veggie_question": "Name a spiny, green vegetable that starts with 'A'.",
       "veggie_answer": "Artichoke",
       "answers": [
-        "correct",
+        "Artichoke",
         "incorrect"
       ]
     },
@@ -25,7 +25,7 @@
       "veggie_question": "Name a long, thin fruit that starts with 'B'. It is yellow on the outside and white on the inside.",
       "veggie_answer": "Banana",
       "answers": [
-        "correct",
+        "Banana",
         "incorrect"
       ]
     },
@@ -35,7 +35,7 @@
       "veggie_question": "Name a long, thin, orange vegetable that grows underground. It starts with a 'C'.",
       "veggie_answer": "Carrot",
       "answers": [
-        "correct",
+        "Carrot",
         "incorrect"
       ]
     },
@@ -45,7 +45,7 @@
       "veggie_question": "Name a crisp, green vegetable that has long stalks. It starts with 'C'.",
       "veggie_answer": "Celery",
       "answers": [
-        "correct",
+        "Celery",
         "incorrect"
       ]
     },
@@ -55,7 +55,7 @@
       "veggie_question": "Name a yellow vegetable that grows on a cob and starts with 'C'.",
       "veggie_answer": "Corn",
       "answers": [
-        "correct",
+        "Corn",
         "incorrect"
       ]
     },
@@ -65,7 +65,7 @@
       "veggie_question": "Name a vegetable that is green on the outside and white on the inside. It starts with 'C'.",
       "veggie_answer": "Cucumber",
       "answers": [
-        "correct",
+        "Cucumber",
         "incorrect"
       ]
     },
@@ -75,7 +75,7 @@
       "veggie_question": "Name a purple vegetable that starts with 'E'.",
       "veggie_answer": "Eggplant",
       "answers": [
-        "correct",
+        "Eggplant",
         "incorrect"
       ]
     },
@@ -85,7 +85,7 @@
       "veggie_question": "Name a big fruit that starts with 'G'. It can be yellow or pink and sometimes squirts you when you eat it.",
       "veggie_answer": "Grapefruit",
       "answers": [
-        "correct",
+        "Grapefruit",
         "incorrect"
       ]
     },
@@ -95,7 +95,7 @@
       "veggie_question": "Name a sweet fruit that grows in bunches on vines. It starts with 'G'.",
       "veggie_answer": "Grapes",
       "answers": [
-        "correct",
+        "Grapes",
         "incorrect"
       ]
     },
@@ -105,7 +105,7 @@
       "veggie_question": "You can cook fruit with sugar to make a sweet spread that tastes good on bread. What is this spread called? It starts with 'J'.",
       "veggie_answer": "Jam",
       "answers": [
-        "correct",
+        "Jam",
         "incorrect"
       ]
     },
@@ -115,7 +115,7 @@
       "veggie_question": "Name a sour, yellow fruit that starts with 'L'.",
       "veggie_answer": "Lemon",
       "answers": [
-        "correct",
+        "Lemon",
         "incorrect"
       ]
     },
@@ -125,7 +125,7 @@
       "veggie_question": "Name a green, leafy vegetable that tastes good in salads. It starts with an 'L'.",
       "veggie_answer": "Lettuce",
       "answers": [
-        "correct",
+        "Lettuce",
         "incorrect"
       ]
     },
@@ -135,7 +135,7 @@
       "veggie_question": "Name a sour, green fruit that starts with 'L'.",
       "veggie_answer": "Lime",
       "answers": [
-        "correct",
+        "Lime",
         "incorrect"
       ]
     },
@@ -145,7 +145,7 @@
       "veggie_question": "Name a type of big fruit that has a rind. It starts with 'M'.",
       "veggie_answer": "Melon",
       "answers": [
-        "correct",
+        "Melon",
         "incorrect"
       ]
     },
@@ -155,7 +155,7 @@
       "veggie_question": "Name an oily, green fruit that starts with 'O'.",
       "veggie_answer": "Olive",
       "answers": [
-        "correct",
+        "Olive",
         "incorrect"
       ]
     },
@@ -165,7 +165,7 @@
       "veggie_question": "Name a sharp-tasting vegetable that starts with 'O'. It grows underground.",
       "veggie_answer": "Onion",
       "answers": [
-        "correct",
+        "Onion",
         "incorrect"
       ]
     },
@@ -175,7 +175,7 @@
       "veggie_question": "Name a sweet fruit that start with the letter 'P' and grows on trees. ",
       "veggie_answer": "Peach",
       "answers": [
-        "correct",
+        "Peach",
         "incorrect"
       ]
     },
@@ -185,7 +185,7 @@
       "veggie_question": "Name a tiny, round green vegetable that grows in pods. It starts with 'P'.",
       "veggie_answer": "Peas",
       "answers": [
-        "correct",
+        "Peas",
         "incorrect"
       ]
     },
@@ -195,7 +195,7 @@
       "veggie_question": "Name a vegetable that is brown on the outside and white on the inside. It grows underground and starts with the letter 'P'.",
       "veggie_answer": "Potato",
       "answers": [
-        "correct",
+        "Potato",
         "incorrect"
       ]
     },
@@ -205,7 +205,7 @@
       "veggie_question": "Name an orange vegetable that can be made into pie. It starts with 'P'.",
       "veggie_answer": "Pumpkin",
       "answers": [
-        "correct",
+        "Pumpkin",
         "incorrect"
       ]
     },
@@ -215,7 +215,7 @@
       "veggie_question": "What do you get when you dry a plum? It starts with 'P'.",
       "veggie_answer": "Prune",
       "answers": [
-        "correct",
+        "Prune",
         "incorrect"
       ]
     },
@@ -225,7 +225,7 @@
       "veggie_question": "What do you get when you dry a grape? It starts with 'R'.",
       "veggie_answer": "Raisin",
       "answers": [
-        "correct",
+        "Raisin",
         "incorrect"
       ]
     },
@@ -235,7 +235,7 @@
       "veggie_question": "Name a sweet, red fruit that starts with 'S'.",
       "veggie_answer": "Strawberry",
       "answers": [
-        "correct",
+        "Strawberry",
         "incorrect"
       ]
     },
@@ -245,7 +245,7 @@
       "veggie_question": "Name a soft, red fruit that starts with 'T'. It is not sweet.",
       "veggie_answer": "Tomato",
       "answers": [
-        "correct",
+        "Tomato",
         "incorrect"
       ]
       },
@@ -255,7 +255,7 @@
       "veggie_question": "Name a sweet fruit that starts with 'W'. It is green on the outside and pink on the inside.",
       "veggie_answer": "Watermelon",
       "answers": [
-        "correct",
+        "Watermelon",
         "incorrect"
       ]
       },
@@ -265,7 +265,7 @@
       "veggie_question": "Name a sweet, orange vegetable that starts with 'Y'. It grows underground and can be made into pie.",
       "veggie_answer": "Yam",
       "answers": [
-        "correct",
+        "Yam",
         "incorrect"
       ]
     }

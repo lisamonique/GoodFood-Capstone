@@ -35,19 +35,7 @@
       </div>
   </div>
 
-  {% for quiz in quiz_question %}
-    <div>
-      <h3>{{quiz.veggie_question}}</h3>
-    </div>
-    {% endfor %}
-
-    {% for quiz in quiz_answer %}
-    <div>
-      <h3>{{quiz.veggie_answer}}</h3>
-    </div>
-  {% endfor %}
-
-  <!-- <div id="generate">
+  <div id="generate">
       <select v-model="amount" name="amount" id="amount">
           <option disabled value="">Number of Questions</option>
           <option value="5">5</option>
@@ -56,19 +44,28 @@
           <option value="20">20</option>
       </select>
       <button v-on:click="getQuiz">Generate Quiz</button>
-  </div> -->
+  </div>
+
+  <div>
+    <h3>{{quiz_question}}</h3>
+    <h4>{{quiz_answer}}</h4>
+    <h1>{{quiz.veggie_question}}</h1>
+  </div>
 
   <article class="flashcard">
     <input id="flashcard-1" type="checkbox" />
     <label for="flashcard-1">
       <section class="front">
+        {{quiz_question}}
         Front of the flashcard!
       </section>
       <section class="back">
+        {{quiz_answer}}
         Back of the flashcard!
       </section>
     </label>
   </article>
+  
   <script>
       window.onscroll = function() {myFunction()};
       

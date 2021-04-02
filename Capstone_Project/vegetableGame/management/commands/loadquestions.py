@@ -19,3 +19,9 @@ class Command(BaseCommand):
             veggie.veggie_question = data['veggie_question']
             veggie.save()
             # print(veggie.veggie_question)
+
+        for data in veggie_data:
+            veggieA = Answer()
+            veggieA.veggie_answer = data['veggie_answer']
+            veggieA.save()
+            print(veggieA.veggie_answer)

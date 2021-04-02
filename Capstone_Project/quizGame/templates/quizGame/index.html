@@ -1,0 +1,57 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz Game</title>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'quizGame/style.css' %}">
+    <script defer src="{% static 'quizGame/main.js' %}"></script>
+</head>
+<body>
+    <div class="header" id="myHeader">
+      <h1>Header: {{ message }}</h1>
+        <div class="topNav">
+            <nav class="navBar">
+              <a href="{% url 'plants:index' %}">Home</a>
+              <a href="#">YouTube</a>
+              <a href="{% url 'plants:aboutPage' %}">About</a>
+              <a href="{% url 'login_user' %}">Member Login</a>
+              <a href="{% url 'register' %}">Join Us</a>
+              <a href="#" class="fa fa-youtube"></a>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="message">
+        <h1>{{ message }}</h1>
+    </div>
+
+    <article class="flashcard">
+        <input id="flashcard-1" type="checkbox" />
+        <label id="app" for="flashcard-1">
+          <section class="front">
+            <!-- Front of the flashcard! -->
+            <p v-html="question"></p>
+          </section>
+          <section class="back">
+            <!-- Back of the flashcard! -->
+            <p v-html="answer"></p>
+          </section>
+        </label>
+    </article>
+
+    <!-- <div id="app2">Data:{{data}}</div> -->
+
+</body>
+</html>

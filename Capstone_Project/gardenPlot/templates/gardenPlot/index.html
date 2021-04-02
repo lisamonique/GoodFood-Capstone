@@ -37,11 +37,11 @@
 
     <label>Choose a Fruit or Vegetable: </label>
             <select multiple>
-                <option v-for="fruit in fruits" disabled placeholder="Please select one">{{fruit}}</option>
-                <!-- <option value="apple">Apple</option>
-                <option value="orange">Orange</option>
-                <option value="squash">Squash</option>
-                <option value="beets">Beets</option> -->
+                <option disabled v-for="fruit in fruits">Please select one</option>
+                <option>{{fruit}}</option>
+                <option>{{fruit}}</option>
+                <option>{{fruit}}</option>
+                <option>{{fruit}}</option>
             </select>
         <input type="submit" name="submit" id="submit">
 
