@@ -3,5 +3,6 @@ from . import views
 
 app_name = 'quizGame'
 urlpatterns = [
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path('getQuestion', views.getQuestion, name='getQuestion')
 ]

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'quizGame/style.css' %}">
     <script defer src="{% static 'quizGame/main.js' %}"></script>
 </head>
+
 <body>
     <div class="header" id="myHeader">
       <h1>Header: {{ message }}</h1>
@@ -37,6 +38,17 @@
         <h1>{{ message }}</h1>
     </div>
 
+    <div id="generate">
+      <select v-model="amount" name="amount" id="amount">
+        <option disabled value="">Number of Questions</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+      <button v-on:click="getQuiz">Generate Quiz</button>
+    </div>
+
     <article class="flashcard">
         <input id="flashcard-1" type="checkbox" />
         <label id="app" for="flashcard-1">
@@ -51,7 +63,20 @@
         </label>
     </article>
 
-    <!-- <div id="app2">Data:{{data}}</div> -->
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      
+      function myFunction() {
+          if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+          } else {
+          header.classList.remove("sticky");
+          }
+      }
+    </script>
 
 </body>
 </html>

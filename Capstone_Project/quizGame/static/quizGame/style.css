@@ -20,6 +20,7 @@ body {
 
 .message{
     text-align: center;
+    padding: 0.5em;
 }
 
 html {
@@ -131,4 +132,10 @@ article.flashcard section.back {
 .fa-facebook {
     background-color: none;
     color: black;
+}
+
+/* Select Styling */
+#generate {
+    text-align: center;
+    padding: 1em;
 }
