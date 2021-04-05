@@ -5,9 +5,6 @@ const checkButton = document.querySelector('.check');
 const nextButton = document.querySelector('.next');
 
 words = {
-    Hello: "안영하새요",
-    GoodBye: "안영히개새요",
-    "I drink water": "나는 물 마사요",
     "Name a fruit that starts with 'A'. It is white on the inside and can be red, yellow, or green on the outside.": "Apple",
     "Name a spiny, green vegetable that starts with 'A'." : "Artichoke",
     "Name a long, thin fruit that starts with 'B'. It is yellow on the outside and white on the inside.": "Banana",

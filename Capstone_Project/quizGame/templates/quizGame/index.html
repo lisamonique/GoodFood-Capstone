@@ -16,7 +16,7 @@
     <script defer src="{% static 'quizGame/main.js' %}"></script>
 </head>
 
-<body>
+<body onload="getRandomWord()">
     <div class="header" id="myHeader">
       <h1>Header: {{ message }}</h1>
         <div class="topNav">
@@ -38,7 +38,6 @@
       <h1>{{ message }}</h1>
     </div> -->
 
-    <body onload="getRandomWord()">
       <h1 class="title">Hello There, Welcome to our Flash Card App</h1>
 
       <div class="term">
@@ -53,7 +52,6 @@
           <button class="check">Check Definition</button>
           <button class="next">Next Definition</button>
       </div>
-    </body>
 
     <!-- <div id="generate">
       <select v-model="amount" name="amount" id="amount">
