@@ -1,6 +1,5 @@
 let app = new Vue({
     el: '#app',
-    delimiters: ['[[', ']]'],
     data: {
         fruits: {
             'apple': apple, 

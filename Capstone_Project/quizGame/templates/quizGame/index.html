@@ -34,11 +34,28 @@
         </div>
     </div>
 
-    <div class="message">
-        <h1>{{ message }}</h1>
-    </div>
+    <!-- <div class="message">
+      <h1>{{ message }}</h1>
+    </div> -->
 
-    <div id="generate">
+    <body onload="getRandomWord()">
+      <h1 class="title">Hello There, Welcome to our Flash Card App</h1>
+
+      <div class="term">
+          <h3>Term</h3>
+      </div>
+
+      <div class="definition">
+          <h3>Definition</h3>
+      </div>
+
+      <div class="button">
+          <button class="check">Check Definition</button>
+          <button class="next">Next Definition</button>
+      </div>
+    </body>
+
+    <!-- <div id="generate">
       <select v-model="amount" name="amount" id="amount">
         <option disabled value="">Number of Questions</option>
         <option value="5">5</option>
@@ -60,8 +77,15 @@
             <!-- Back of the flashcard! -->
             <p v-html="answer"></p>
           </section>
+          <p v-html="ques"></p>
         </label>
-    </article>
+    </article> -->
+    
+    <!-- {% for quiz in quiz_question %}
+    <div>
+      <h3>Quiz Questions: {{quiz.veggie_question}}</h3>
+    </div>
+    {% endfor %} -->
 
     <script>
       window.onscroll = function() {myFunction()};

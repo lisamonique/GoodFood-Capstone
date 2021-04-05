@@ -1,3 +1,5 @@
+/* Header Styling */
+
 * {
     padding: 0;
     margin: 0;
@@ -8,6 +10,7 @@ body{
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url(/Capstone_Project/images/green_grass.jpg);
 }
 
 .header {
@@ -60,6 +63,8 @@ body{
     color: black;
   }
 
+
+/* Garden Plot Styling */
 table{
   display: flex;
   flex-direction: row;
@@ -93,4 +98,30 @@ tr:nth-child(3){
 }
 tr:nth-child(4){
   background-color: greenyellow;
+}
+
+td{
+  position: relative;
+}
+.row2 {
+	animation-name: fade;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-direction: alternate;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
 }

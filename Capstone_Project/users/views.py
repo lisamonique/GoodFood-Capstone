@@ -29,7 +29,7 @@ def register(request):
         
         if password == confirm:
             User.objects.create_user(username, email, password)
-            return HttpResponseRedirect(reverse('profile'))
+            return HttpResponseRedirect(reverse('login_user'))
         else:
             return HttpResponseRedirect(reverse('register') + f'?error=passwords do not match&username={username}&email={email}')
 
@@ -58,9 +58,9 @@ def logout_user(request):
     logout(request)
     return HttpResponseRedirect(reverse('plants:index'))
 
-
+@login_required
 def profile(request):
     if not request.user.is_authenticated:
-        return HttpResponseRedirect(reverse('users:login'))
+        return HttpResponseRedirect(reverse('login_user'))
 
     return render(request, 'users/profile.html')
