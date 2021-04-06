@@ -3,8 +3,6 @@ from django.shortcuts import render
 import requests
 import json
 
-# from vegetableGame.models import Question, Answer
-
 # Create your views here.
 
 def index(request):
@@ -20,16 +18,21 @@ def aboutPage(request):
     return render(request, 'plants/about.html', context)
 
 def edamam(request):
+    app_id = 'c48cccb3'
+    app_key = '90a279a59b69df078c597025e6a44c35'
+    
+    if 'ingr' in request.GET:
+        ingr = request.GET['ingr']
+    else:
+        ingr = 'apple'
+    response = requests.get(f"https://api.edamam.com/api/food-database/v2/parser?app_id={app_id}&app_key={app_key}&ingr={ingr}")
+    food_data = response.json()
+    print(food_data)
+    return render(request, 'plants/food_data.html', {
+        'parsed': food_data['parsed'],
+        'links': food_data['_links'],
+        'hints': food_data['hints']
+    })
+
+def viewFood(request):
     pass
-    # response = requests.get('https://api.edamam.com/api/food-database/v2/parser?')
-    # if 'ingr' in request.GET:
-    #     ingr = request.GET['ingr']
-    # food_data = response.json()
-    # return render(request, 'plants/food_data.html', {
-    #     # 'food': food_data['food']['parsed'],
-    #     'parsed': food_data['parsed']['food'],
-    #     '_links': food_data['_links'], 
-    #     'ingr': ingr,
-    #     'app_id' : 'c48cccb3',
-    #     'app_key': '90a279a59b69df078c597025e6a44c35'
-    return render(request, 'plants/about.html')

@@ -10,7 +10,7 @@ body{
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(/Capstone_Project/images/green_grass.jpg);
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWpm4KTO64Bsgq79NnWT9KIi17p4KanmZZ8w&usqp=CAU");
 }
 
 .header {
@@ -71,10 +71,6 @@ table{
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  background-image: url("https://lh3.googleusercontent.com/proxy/ScQlGbstt6uDnZN41F3F9ATmHvYnQm01nofAaNgn8Ebxi01FMw58saPuX-ecdVeHe_a7HiBzrEEbO9qyl3hWE8vP7g");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: auto;
 }
 
 tr {
@@ -87,41 +83,37 @@ tr {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@keyframes trFadeInOut {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
 tr:nth-child(1){
   background-color: red;
+  animation-delay: 6s;
 }
 tr:nth-child(2){
   background-color: orange;
+  animation-delay: 4s;
 }
 tr:nth-child(3){
   background-color: yellow;
+  animation-delay: 2s;
 }
 tr:nth-child(4){
   background-color: greenyellow;
-}
-
-td{
-  position: relative;
-}
-.row2 {
-	animation-name: fade;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-duration: 1s;
-	animation-direction: alternate;
-}
-
-@keyframes fade {
-	0% {
-		opacity: 1;
-	}
-	25% {
-		opacity: 1;
-	}
-	75% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
+  animation-delay: 0;  
 }

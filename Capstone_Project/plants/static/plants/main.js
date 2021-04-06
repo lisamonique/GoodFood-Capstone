@@ -2,6 +2,8 @@
 //     el: "#foodDataBase",
 //     data: {
 //         message: 'Food Database',
+//         food: '',
+//         label: ''
 //     },
 //     methods: {
 //         // some data
@@ -9,10 +11,11 @@
 //     created: async function () {
 //         let response = await axios({
 //             method: 'get',
-//             url: 'https://api.edamam.com/api/food-database/v2/parser?ingr=red%20apple&app_id=' + app_id + '&app_key=' + app_key,
+//             url: 'https://api.edamam.com/api/food-database/v2/parser?app_id={app_id}&app_key={app_key}&ingr={ingr}',
 //             params: {
 //                 app_id: APP_ID,
-//                 app_key: APP_KEY
+//                 app_key: APP_KEY,
+//                 ingr: 'ingr'
 //             }
 //         }).then((response) => {
 //             console.log(response)

@@ -1,5 +1,5 @@
 /* Flashcard Styling */
-/* * {
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -13,14 +13,9 @@ body {
     height: 100%;
 }
 
-body {
-    padding: 50px;
-    display: table;
-}
-
 .message{
     text-align: center;
-    padding: 0.5em;
+    padding: 1em;
 }
 
 html {
@@ -72,6 +67,7 @@ article.flashcard section.front {
     height: 100%;
     font-weight: bold;
     font-size: 3em;
+    line-height: inherit;
 }
 
 article.flashcard section.back {
@@ -80,7 +76,7 @@ article.flashcard section.back {
     height: 0%;
     font-weight: bold;
     font-size: 3em;
-} */
+}
 
 
 /* Header Styling */
@@ -135,19 +131,15 @@ article.flashcard section.back {
 }
 
 /* Select Styling */
-#generate {
+/* #generate {
     text-align: center;
     padding: 1em;
-}
+} */
 
 
 /* Second Flashcard Game */
-.title {
-    text-align: center;
-    font-family: 'Lobster', cursive;
-}
 
-.term {
+/* #term {
     border: solid 5px black;
     border-radius: 15px;
     text-align: center;
@@ -156,7 +148,7 @@ article.flashcard section.back {
     margin-top: 100px;
 }
 
-.definition {
+#definition {
     border: solid 5px black;
     border-radius: 15px;
     text-align: center;
@@ -164,11 +156,11 @@ article.flashcard section.back {
     margin: auto;
     margin-top: 100px;
     display: none;
-}
+} */
 
-.button {
+#button {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 button {
@@ -180,4 +172,8 @@ button {
 
 button:hover {
     transform: scale(1.1);
+}
+
+#check {
+    display: none;
 }

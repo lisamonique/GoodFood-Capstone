@@ -16,7 +16,7 @@
     <script defer src="{% static 'quizGame/main.js' %}"></script>
 </head>
 
-<body onload="getRandomWord()">
+<body>
     <div class="header" id="myHeader">
       <h1>Header: {{ message }}</h1>
         <div class="topNav">
@@ -34,24 +34,9 @@
         </div>
     </div>
 
-    <!-- <div class="message">
+    <div class="message">
       <h1>{{ message }}</h1>
-    </div> -->
-
-      <h1 class="title">Hello There, Welcome to our Flash Card App</h1>
-
-      <div class="term">
-          <h3>Term</h3>
-      </div>
-
-      <div class="definition">
-          <h3>Definition</h3>
-      </div>
-
-      <div class="button">
-          <button class="check">Check Definition</button>
-          <button class="next">Next Definition</button>
-      </div>
+    </div>
 
     <!-- <div id="generate">
       <select v-model="amount" name="amount" id="amount">
@@ -62,23 +47,28 @@
         <option value="20">20</option>
       </select>
       <button v-on:click="getQuiz">Generate Quiz</button>
-    </div>
+    </div> -->
 
     <article class="flashcard">
-        <input id="flashcard-1" type="checkbox" />
-        <label id="app" for="flashcard-1">
-          <section class="front">
-            <!-- Front of the flashcard! -->
-            <p v-html="question"></p>
-          </section>
-          <section class="back">
-            <!-- Back of the flashcard! -->
-            <p v-html="answer"></p>
-          </section>
-          <p v-html="ques"></p>
-        </label>
-    </article> -->
-    
+      <input id="flashcard-1" type="checkbox"/>
+      <label onload="getRandomWord()" id="app" for="flashcard-1">
+
+      <section id="term" class="front">
+        <h3>Term</h3>
+      </section>
+          
+      <section id="definition" class="back">
+        <h3>Definition</h3>
+      </section>
+
+      <div id="button">
+        <button id="check">Check</button>
+        <button id="next">Next</button>
+      </div>
+      
+      </label>
+    </article>
+
     <!-- {% for quiz in quiz_question %}
     <div>
       <h3>Quiz Questions: {{quiz.veggie_question}}</h3>
