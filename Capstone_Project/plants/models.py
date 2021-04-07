@@ -7,7 +7,7 @@ class Food(models.Model):
     parsed = models.CharField(max_length=200)
     hints = models.CharField(max_length=200)
     _links = models.CharField(max_length=200)
-    labels = models.CharField(max_length=50)
+    label = models.CharField(max_length=50)
     image = models.URLField(null=True, blank=True)
     
     def __str__(self):

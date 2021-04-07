@@ -1,6 +1,50 @@
 {% extends 'plants/base.html' %}
 
 {% block plants %}
+
+<h1>Vegetable & Fruit Search</h1>
+<br>
+<!-- <form action="#">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for food..." title="Type in a name">   
+    <button type="submit">Search</button>
+</form>
+<br>
+<h2>[#10]SEARCH RESULTS FOUND</h2>
+<br>
+<h4>You searched for: "tomato"</h4>
+<br>
+<h5><a href="{% url 'plants:index' %}">Home</a> > <a href="#">Search results for “tomato”</a></h5>
+<br>
+
+<div>
+    <img src="https://www.edamam.com/food-img/42c/42c006401027d35add93113548eeaae6.jpg" alt="Picture of Searched Food Item">
+    <div>
+        <h2>Title of "Food Searched"</h2>   
+        <p>Information about "food searched". Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta.</p>
+        <a href="#">More Info</a>
+    </div>
+</div> -->
+
+<br>
+<div>
+    <h1>NEW Vue JS</h1>
+    <form action="#">
+        {% csrf_token%}
+        <input type="userQuery" v-on:keydown.enter="searchIngr" type="text" placeholder="Search for food...">
+        <button v-on:click="searchIngr">Search</button> 
+    </form>
+</div>
+
+<div>
+    <li v-for="(data, i) in ingrResult">
+        <p>LAbel: {{data.label}}</p> 
+        <p>Image: {{data.image}}</p>
+        
+    </li>
+</div>
+
+<hr>
+<br>
 <div>
     <h4>Links: {{links}}</h4>
     <br>
@@ -8,4 +52,4 @@
     <br>
     <p>Hints: {{hints}}</p>
 </div>
-{% endblock %}''
+{% endblock %}
