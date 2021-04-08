@@ -1,55 +1,44 @@
 {% extends 'plants/base.html' %}
 
 {% block plants %}
+<div id="foodDataBase">
 
-<h1>Vegetable & Fruit Search</h1>
-<br>
-<!-- <form action="#">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for food..." title="Type in a name">   
-    <button type="submit">Search</button>
-</form>
-<br>
-<h2>[#10]SEARCH RESULTS FOUND</h2>
-<br>
-<h4>You searched for: "tomato"</h4>
-<br>
-<h5><a href="{% url 'plants:index' %}">Home</a> > <a href="#">Search results for “tomato”</a></h5>
-<br>
 
-<div>
-    <img src="https://www.edamam.com/food-img/42c/42c006401027d35add93113548eeaae6.jpg" alt="Picture of Searched Food Item">
+    <h1>Vegetable & Fruit Search</h1>
+    <h2>[[message]]</h2>
+    <br>
     <div>
-        <h2>Title of "Food Searched"</h2>   
-        <p>Information about "food searched". Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta.</p>
-        <a href="#">More Info</a>
+        <div>
+            <input type="text" v-model="userQuery" v-on:keydown.enter="searchIngr" type="text" placeholder="Search for food...">
+            <button v-on:click="searchIngr">Search</button> 
+        </div>
     </div>
-</div> -->
-
-<br>
-<div>
-    <h1>NEW Vue JS</h1>
-    <form action="#">
-        {% csrf_token%}
-        <input type="userQuery" v-on:keydown.enter="searchIngr" type="text" placeholder="Search for food...">
-        <button v-on:click="searchIngr">Search</button> 
-    </form>
-</div>
-
-<div>
-    <li v-for="(data, i) in ingrResult">
-        <p>LAbel: {{data.label}}</p> 
-        <p>Image: {{data.image}}</p>
-        
-    </li>
-</div>
-
-<hr>
-<br>
-<div>
-    <h4>Links: {{links}}</h4>
+    <h2>"[[ingrResult.length]]" SEARCH RESULTS FOUND</h2>
     <br>
-    <p>Parsed: {{parsed}}</p>
+    <h4>You searched for: [[userQuery]]</h4>
     <br>
-    <p>Hints: {{hints}}</p>
+    <h5><a href="{% url 'plants:index' %}">Home</a> > <a href="#">Search results for [[userQuery]]</a></h5>
+    <br>
+
+    <div>
+        <div>
+            <h2>Title of "Food Searched"</h2>   
+            <p>Information about "food searched". Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta.</p>
+            <a href="#">More Info</a>
+        </div>
+    </div>
+    <br>
+    <div>
+        <li v-for="(data, i) in ingrResult">
+            <p>Label: [[data?.food?.label]]</p> 
+            <p><img v-bind:src="[[data?.food?.image]]" alt="Food Image"> Image: [[data?.food?.image]]</p>
+            <p>Nutrients: [[data?.food?.nutrients]]</p>
+            <p>User Query: [[userQuery]]</p>
+            <p>Category Label: [[data?.food?.categoryLabel]]</p>
+        </li>
+    </div>
 </div>
+    <div>
+        <h4>Links: {{links}}</h4>
+    </div>
 {% endblock %}

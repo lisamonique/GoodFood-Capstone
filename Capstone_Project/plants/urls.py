@@ -5,6 +5,7 @@ app_name = 'plants'
 urlpatterns = [
     path('', views.index, name='index'),
     path('aboutPage/', views.aboutPage, name='aboutPage'),
-    path('edamam/', views.edamam, name='edamam'),
-    path('viewFood/', views.viewFood, name="viewFood")
+    path('food_data/', views.food_data, name='food_data'),
+    path('viewFood/', views.viewFood, name="viewFood"),
+    path('edamam/', views.edamam, name="edamam")
 ]
