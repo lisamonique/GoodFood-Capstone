@@ -83,24 +83,6 @@ tr {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes trFadeInOut {
-  0% {
-    opacity:1;
-  }
-  17% {
-    opacity:1;
-  }
-  25% {
-    opacity:0;
-  }
-  92% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-
 tr:nth-child(1){
   background-color: red;
   animation-delay: 6s;
@@ -115,5 +97,24 @@ tr:nth-child(3){
 }
 tr:nth-child(4){
   background-color: greenyellow;
-  animation-delay: 0;  
+  animation-delay: 0;
+}
+
+.row1 {
+  width: 150px;
+  height: 150px;
+  background: red;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: background-image 2s ease-out;
+  -moz-transition: background-image 2s ease-out;
+  -o-transition: background-image 2s ease-out;
+  transition: background-image 2s ease-out;
+}
+
+.row1:hover {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hangman-6.png/60px-Hangman-6.png");
+  background-color: green;
+  cursor: pointer;
 }

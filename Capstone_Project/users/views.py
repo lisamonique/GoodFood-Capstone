@@ -60,7 +60,7 @@ def logout_user(request):
 
 @login_required
 def profile(request):
-    if not request.user.is_authenticated:
+    if request.user.is_authenticated:
+        return render(request, 'users/profile.html') 
+    else:    
         return HttpResponseRedirect(reverse('login_user'))
-
-    return render(request, 'users/profile.html')

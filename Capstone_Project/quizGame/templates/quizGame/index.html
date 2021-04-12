@@ -38,41 +38,36 @@
       <h1>{{ message }}</h1>
     </div>
 
-    <!-- <div id="generate">
-      <select v-model="amount" name="amount" id="amount">
-        <option disabled value="">Number of Questions</option>
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="15">15</option>
-        <option value="20">20</option>
-      </select>
-      <button v-on:click="getQuiz">Generate Quiz</button>
-    </div> -->
-
     <article class="flashcard">
       <input id="flashcard-1" type="checkbox"/>
       <label onload="getRandomWord()" id="app" for="flashcard-1">
+        <section id="term" class="front">
+          <h3>Term</h3>
+        </section>
+            
+        <section id="definition" class="back">
+          <h3>Definition</h3>
+        </section>
 
-      <section id="term" class="front">
-        <h3>Term</h3>
-      </section>
-          
-      <section id="definition" class="back">
-        <h3>Definition</h3>
-      </section>
+        <div id="button">
+          <button id="check">Check</button>
+          <button id="next">Next</button>
+        </div>
 
-      <div id="button">
-        <button id="check">Check</button>
-        <button id="next">Next</button>
-      </div>
+        <input id="userInput" type="text">
       </label>
     </article>
+
+
 
     <!-- {% for quiz in quiz_question %}
     <div>
       <h3>Quiz Questions: {{quiz.veggie_question}}</h3>
     </div>
     {% endfor %} -->
+  </div>
+</div>
+
 
     <script>
       window.onscroll = function() {myFunction()};

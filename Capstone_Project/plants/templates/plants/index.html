@@ -8,18 +8,23 @@
 
     <div class="content">
         <section class="square1">
-            <a href="{% url 'plants:food_data' %}">open</a>
             empty space
         </section>
         <section class="options">
+            {% if error %}
+            {{error}}
+            {% endif %}
             <p>Wanna Play?</p>
             <a href="{% url 'quizGame:index' %}">CLICK ME</a>
         </section>
         <section class="options">
-            <p>Learn More ---></p>
-            <p>Quiz <---</p>
+            <p>Learn More</p>
+            <a href="{% url 'plants:food_data' %}">open</a>
         </section>
         <section class="options">
+            {% if error %}
+            {{error}}
+            {% endif %}
             <p>Fruits & Vegetables</p>
             <a href="{% url 'gardenPlot:index' %}">CLICK ME</a>
         </section>

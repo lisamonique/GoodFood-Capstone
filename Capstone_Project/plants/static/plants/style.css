@@ -28,6 +28,7 @@ body{
     background-image: url("https://www.pennington.com/-/media/Images/Pennington2-NA/US/blog/fertilizer/How-to-grow-an-organic-vegetable-garden/Bunch-of-fresh-veggies-h.jpg?h=480&la=en&w=1140&hash=B86177ADDF67F3E8659716962AE1AE98CA05E5A3");
 }
 
+/* Header Styling */
 .header {
     padding: 10px 16px;
     background: #08BDBD;
@@ -114,7 +115,6 @@ body{
     rgba(255, 255, 255, 0.3)
   );
   border-radius: 2rem;
-  /* position: absolute; */
 }
 
 .square1 {
@@ -128,4 +128,39 @@ body{
 
 .summary {
   display: grid;
+}
+
+/* Food Results Styling */
+.wrapper {
+  width: 720px;
+  margin: 0px auto;
+}
+
+.entry {
+  width: 220px;
+  float: left;
+  margin: 10px;
+  height: 198px;
+  background-image: url('images/shadow.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+figure {
+  width: 202px;
+  height: 170px;
+  background-color: #e7e3db;
+  margin: 0px;
+  padding: 9px;
+  text-align: left;
+}
+
+figure img {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #d6d6d6;
+}
+
+figcaption {
+  padding-left: 20px;
 }

@@ -29,11 +29,11 @@ def edamam(request):
     
     if 'ingr' in request.GET:
         ingr = request.GET['ingr']
-    # else:
-    #     ingr = 'apple'
+    else:
+        ingr = 'apple'
     response = requests.get(f"https://api.edamam.com/api/food-database/v2/parser?app_id={app_id}&app_key={app_key}&ingr={ingr}")
     food_data = response.json()
-    # print(food_data)
+    print(food_data)
     return JsonResponse(food_data)
 
 def viewFood(request):
