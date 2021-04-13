@@ -3,10 +3,6 @@ const term = document.querySelector('#term');
 const definition = document.querySelector('#definition');
 const checkButton = document.querySelector('#check');
 const nextButton = document.querySelector('#next');
-// let input = document.querySelector('#userInput');
-
-// let score = 0
-// let flip = tru
 
 words = {
     "Name a fruit that starts with 'A'. It is white on the inside and can be red, yellow, or green on the outside.": "Apple",
@@ -53,78 +49,3 @@ checkButton.addEventListener('click', function() {
 nextButton.addEventListener('click', function() {
     getRandomWord();
 });
-
-// button.addEventListener('click', function(){
-//     // alert(input.value) 
-//     // if user input equals answer flip card and show answer; else alert wrong answer,
-//     header.innerText = input.value
-// })
-
-
-
-
-
-// let app = new Vue({
-//     el: '#app',
-//     delimiters: ["[[", "]]"],
-//     data: {
-//         term: '',
-//         definition: '',
-//         baseURL: '../getQuiz/'
-//     },
-//     methods: {
-//         getRandomWord: async function() {
-//             let randomIndex = Math.floor(Math.random() * data.length)
-//             let randomTerm = data[randomIndex]
-//             let response = await axios({
-//                 url: '../getQuiz/'
-//             })
-//             console.log(response)
-//             // this.term = randomTerm[0]
-//             // this.definition = randomTerm[1]
-//         }
-//     }
-// })
-
-// let app = new Vue({
-//     el: '#app',
-//     delimiters: ['[[', ']]'],
-//     data: {
-//         baseURL: '../edamam/',
-//         veggie_question: '',
-//         veggie_answer: '',
-//         questions: []
-//     },
-//     methods: {
-//         getQuiz: async function () {
-//             const response = await axios({
-//                 method: 'get',
-//                 url: this.baseURL,
-//                 params: {
-
-//                 }
-//             })
-//             console.log(response)
-            // let questions = response.data.results
-            // for (question of questions) {
-            //     this.questions.push({
-            //         question: question.question,
-            //         answers: [question.correct_answer].concat(question.incorrect_answers)
-            //     })
-            // }
-    //     },
-    //     decodeHTML: function (html) {
-    //         const txt = document.createElement('textarea');
-    //         txt.innerHTML = html;
-    //         return txt.value;
-    //     }
-
-    // },
-    // created: async function () {
-    //     const response = await axios({
-    //         method: 'get',
-    //         url: 'https://opentdb.com/api_category.php'
-    //     })
-    //     this.categories = response.data.trivia_categories
-    // }
-// })

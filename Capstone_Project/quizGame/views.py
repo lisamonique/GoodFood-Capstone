@@ -24,7 +24,8 @@ def index(request):
     if request.user.is_authenticated:
         return render(request, 'quizGame/index.html', context)
     else:
-        return HttpResponseRedirect(reverse('plants:index') + '?error=You Are Not Logged In!')
+        return HttpResponseRedirect(reverse('login_user'))
+        # return HttpResponseRedirect(reverse('plants:index') + '?error=You Are Not Logged In!')
 
 def getQuiz(request):
 
@@ -47,12 +48,3 @@ def getQuiz(request):
         # print(food)
 
     return JsonResponse(veggie_data)
-
-def getQuestion(request):
-    quiz_question = Question.objects.all()
-    response = {'data': []}
-    for mon in quiz_question:
-        response['data'].append({
-            'veggie_question': mon.veggie_question
-        })
-    return JsonResponse(response)

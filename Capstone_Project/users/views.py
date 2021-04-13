@@ -56,7 +56,7 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    return HttpResponseRedirect(reverse('plants:index'))
+    return HttpResponseRedirect(reverse('plants:index') + '?message=You Have Logged Out!')
 
 @login_required
 def profile(request):

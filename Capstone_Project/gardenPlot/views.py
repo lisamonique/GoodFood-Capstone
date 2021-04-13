@@ -18,4 +18,5 @@ def index(request):
     if request.user.is_authenticated:
         return render(request, 'gardenPlot/index.html', context)
     else:
-        return HttpResponseRedirect(reverse('plants:index') + '?error=You Are Not Logged In!')
+        return HttpResponseRedirect(reverse('login_user'))
+        # return HttpResponseRedirect(reverse('plants:index') + '?error=You Are Not Logged In!')

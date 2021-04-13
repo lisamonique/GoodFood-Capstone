@@ -1,7 +1,7 @@
 {% extends 'plants/base.html' %}
 
 {% block plants %}
-<body>
+<!-- <body> -->
 
     <div class="content">
         <section class="square1">
@@ -16,7 +16,7 @@
         </section>
         <section class="options">
             <p>Learn More</p>
-            <a href="{% url 'plants:food_data' %}">open</a>
+            <a href="{% url 'plants:foodData' %}">open</a>
         </section>
         <section class="options">
             {% if error %}
@@ -94,5 +94,5 @@
         <hr>
         <img class="tree" src="https://picsum.photos/200/300" alt="picsum image">
     </div>
-</body>
+<!-- </body> -->
 {% endblock %}

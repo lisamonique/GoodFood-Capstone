@@ -17,7 +17,7 @@ def aboutPage(request):
     }
     return render(request, 'plants/about.html', context)
 
-def food_data(request):
+def foodData(request):
     context = {
         "message": 'GoodFood Search'
     }
@@ -25,7 +25,7 @@ def food_data(request):
 
 def dashboard(request):
     context = {
-        'message': "Good Food Dashboard"
+        'message': "GoodFood Dashboard"
     }
     return render(request, 'plants/dashboard.html', context)
 
@@ -51,5 +51,5 @@ def viewRecipe(request):
         query = 'chicken'
     response = requests.get(f"https://api.edamam.com/search?q={query}&app_id={app_id}&app_key={app_key}")
     recipe_data = response.json()
-    print(recipe_data)
+    # print(recipe_data)
     return JsonResponse(recipe_data)

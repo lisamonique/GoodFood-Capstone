@@ -4,7 +4,7 @@
 <div>
    {% if user.is_authenticated %}
     <a href="{% url 'logout_user' %}">logout</a>    
-    <h1>Welcome {{ user }} Glad to See You Again!</h1>
+    <h1>Welcome {{ user }}!</h1>
     <hr>
     <div class="content">
         <section class="square1">
@@ -16,7 +16,7 @@
         </section>
         <section class="options">
             <p>Learn More</p>
-            <a href="{% url 'plants:food_data' %}">open</a>
+            <a href="{% url 'plants:foodData' %}">open</a>
         </section>
         <section class="options">
             <p>Fruits & Vegetables</p>
