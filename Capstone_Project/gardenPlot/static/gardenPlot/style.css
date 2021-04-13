@@ -100,21 +100,90 @@ tr:nth-child(4){
   animation-delay: 0;
 }
 
-.row1 {
+td {
   width: 150px;
   height: 150px;
-  background: red;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-transition: background-image 2s ease-out;
-  -moz-transition: background-image 2s ease-out;
-  -o-transition: background-image 2s ease-out;
-  transition: background-image 2s ease-out;
+  animation-name: td;
+  animation-duration: 8s;
+  animation-timing-function: steps(4);
+  animation-iteration-count: infinite;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
 
-.row1:hover {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hangman-6.png/60px-Hangman-6.png");
-  background-color: green;
+td:hover {
+  background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
   cursor: pointer;
+}
+@keyframes td {
+  0%{
+    background-image: url('../images/Untitled1_20210412142606.png');
+  }
+  25%{
+    background-image: url('../images/Untitled1_20210412142618.png');
+  }
+  50%{
+    background-image: url('../images/Untitled1_20210412142626.png');
+  }
+  75%{
+    background-image: url('../images/Untitled1_20210412142632.png');
+  }
+  100%{
+    background-image: url('../images/Untitled1_20210412142638.png');
+  }
+}
+
+
+
+/* // animation container */
+.animation-title {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.eye-animation {  
+  /* // place in the middle of the screen */
+  margin: auto;
+  
+  width: 300px;
+  height: 300px;
+  
+  /* // we set the horizontal size to 1800% because we have 18 / */
+  background-image: url('../images/Untitled1_20210412142606.png'), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png') ;
+  background-size: 225%, 10%;
+  background-position: center;
+  
+  /* // 'animation-timing-function' ensures users won’t see half of one frame and half of the following frame both at the same time
+  // we set the number of steps to 17 because we have 18 frames  */
+  animation-name: eye-fill;
+  animation-duration: 8s;
+  animation-timing-function: steps(4);
+  animation-iteration-count: infinite;
+}
+
+/* // during the animation we move the background-image from left to right */
+@keyframes eye-fill {
+  0%{
+    background-image: url('../images/Untitled1_20210412142606.png');
+  }
+  25%{
+    background-image: url('../images/Untitled1_20210412142618.png');
+  }
+  50%{
+    background-image: url('../images/Untitled1_20210412142626.png');
+  }
+  75%{
+    background-image: url('../images/Untitled1_20210412142632.png');
+  }
+  100%{
+    background-image: url('../images/Untitled1_20210412142638.png');
+  }
 }

@@ -3,10 +3,10 @@ const term = document.querySelector('#term');
 const definition = document.querySelector('#definition');
 const checkButton = document.querySelector('#check');
 const nextButton = document.querySelector('#next');
-let input = document.querySelector('#userInput');
+// let input = document.querySelector('#userInput');
 
 let score = 0
-let flip = true
+let flip = tru
 
 words = {
     "Name a fruit that starts with 'A'. It is white on the inside and can be red, yellow, or green on the outside.": "Apple",
@@ -54,11 +54,11 @@ nextButton.addEventListener('click', function() {
     getRandomWord();
 });
 
-button.addEventListener('click', function(){
-    // alert(input.value) 
-    // if user input equals answer flip card and show answer; else alert wrong answer,
-    header.innerText = input.value
-})
+// button.addEventListener('click', function(){
+//     // alert(input.value) 
+//     // if user input equals answer flip card and show answer; else alert wrong answer,
+//     header.innerText = input.value
+// })
 
 
 

@@ -35,55 +35,93 @@
         </div>
     </div>
 
-    <label id="app">Choose a Fruit or Vegetable: </label>
-            <select multiple>
-                <option disabled v-for="fruit in fruits">Please select one</option>
-                <option>1: {{fruit}}</option>
-                <option>2: {{fruit}}</option>
-                <option>3: {{fruit}}</option>
-                <option>4: {{fruit}}</option>
-            </select>
-        <input type="submit" name="submit" id="submit">
+
+
+    <!-- animation container -->
+<h2 class="animation-title">Frame by Frame Animation: #3 Position (CSS-Only Animation)</h2>
+<div class="eye-animation"></div>
+
 
     <div class="plot">
-        <h2>Create A Garden</h2>
-        <h3>Select Fruits or Vegetable</h3>
-        <p>Watch your seeds blossom into plants!</p>
-
-        
+        <h2>Watch your seeds blossom into plants!</h2>
+        <h5>Roll Your Mouse Across The Spaces</h5>
         <table class="innerplot">
         <tr class="row1">
-            <td>Spot1<img id="hangman-image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hangman-6.png/60px-Hangman-6.png"></td>
-            <td>Spot2<img id="hangman-image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hangman-5.png/60px-Hangman-5.png"></td>
-            <td>Spot3<img id="hangman-image3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hangman-4.png/60px-Hangman-4.png"></td>
-            <td>Spot4<img id="hangman-image4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Hangman-3.png/60px-Hangman-3.png"></td>
-            <td>Spot5<img id="hangman-image5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Hangman-2.png/60px-Hangman-2.png"></td>
+            <th>ROW 1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr class="row2">
-            <td>Spot6<img id="hangman-image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hangman-6.png/60px-Hangman-6.png"></td>
-            <td>Spot7<img id="hangman-image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hangman-5.png/60px-Hangman-5.png"></td>
-            <td>Spot8<img id="hangman-image3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hangman-4.png/60px-Hangman-4.png"></td>
-            <td>Spot9<img id="hangman-image4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Hangman-3.png/60px-Hangman-3.png"></td>
-            <td>Spot10<img id="hangman-image5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Hangman-2.png/60px-Hangman-2.png"></td>
+            <th>ROW 2</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr class="row3">
-            <td>Spot11<img id="hangman-image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hangman-6.png/60px-Hangman-6.png"></td>
-            <td>Spot12<img id="hangman-image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hangman-5.png/60px-Hangman-5.png"></td>
-            <td>Spot13<img id="hangman-image3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hangman-4.png/60px-Hangman-4.png"></td>
-            <td>Spot14<img id="hangman-image4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Hangman-3.png/60px-Hangman-3.png"></td>
-            <td>Spot15<img id="hangman-image5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Hangman-2.png/60px-Hangman-2.png"></td>
+            <th>ROW 3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr class="row4">
-            <td>Spot16<img id="hangman-image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hangman-6.png/60px-Hangman-6.png"></td>
-            <td>Spot17<img id="hangman-image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hangman-5.png/60px-Hangman-5.png"></td>
-            <td>Spot18<img id="hangman-image3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hangman-4.png/60px-Hangman-4.png"></td>
-            <td>Spot19<img id="hangman-image4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Hangman-3.png/60px-Hangman-3.png"></td>
-            <td>Spot20<img id="hangman-image5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Hangman-2.png/60px-Hangman-2.png"></td>
+            <th>ROW 4</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
     </div>
+
     
-    
+
+    <footer class="footer">
+        <img class="above" src='https://lh3.googleusercontent.com/proxy/l3NfZbKHK_sSZaw034vwF7xlBcAHQke5ZGlG3wzFMzXkCCZ3kWtA0e73vrW2_nZnmdUP75arXDNvBl8EioqfqZiejWww1R9DC67bYiIdRagBltq7rGHCBeh_gME-HrNZ5KIWJVt9' alt="Farm Footer">  
+        <p>Footer</p>
+        <div>
+            <h3>About</h3>   
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod minima neque enim facilis corporis explicabo quos non distinctio iure, quasi incidunt ducimus optio ex quisquam? Consequuntur, sapiente id. Perspiciatis, libero!</p>
+            <a href="{% url 'plants:aboutPage' %}">READ MORE</a>
+        </div>
+        <div>
+            <h3>Information</h3>
+            <ul>
+                <li><a href="#">Legal Notice</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <p class="copyright">Copyright ©2021 - All Rights. Reserved</p>    
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Site Map</a></li>
+            </ul>
+        </div>
+        <div class="siteinfo">
+            <h3>Get In</h3>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+
     <script>
         window.onscroll = function() {myFunction()};
         

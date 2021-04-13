@@ -22,4 +22,5 @@ class Command(BaseCommand):
             for answer in info['answers']:
                 obj, created = Answer.objects.get_or_create(veggie_answer=answer, question=food)
                 db_types.append(obj)
-            print(food)
+            # print(food)
+            print(db_types)
