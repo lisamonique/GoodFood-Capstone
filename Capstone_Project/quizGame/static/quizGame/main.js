@@ -5,8 +5,8 @@ const checkButton = document.querySelector('#check');
 const nextButton = document.querySelector('#next');
 // let input = document.querySelector('#userInput');
 
-let score = 0
-let flip = tru
+// let score = 0
+// let flip = tru
 
 words = {
     "Name a fruit that starts with 'A'. It is white on the inside and can be red, yellow, or green on the outside.": "Apple",

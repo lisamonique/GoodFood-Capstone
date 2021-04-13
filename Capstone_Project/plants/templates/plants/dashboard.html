@@ -1,0 +1,36 @@
+{% extends 'plants/base.html' %}
+
+{% block plants %}
+<div id="recipeDataBase">
+
+
+    <h1>USER DASHBOARD</h1>
+    <h2>[[message]]</h2>
+    <br>
+    <div>
+        <div>
+            <input type="text" v-model="userQuery"  type="text" placeholder="Search for Recipes...">
+            <button v-on:click="searchMeals">Search</button> 
+        </div>
+    </div>
+
+    <!-- <div class="wrapper">
+        <div class="wrapper">
+            <div v-for="(data, i) in mealsResult" class="entry">
+                <img v-bind:src="[[data?.recipe?.image]]" alt="Food Image">
+                <h3>LabeL:[[data?.recipe?.label]]</h3>
+            </div>
+        </div>
+    </div> -->
+    <li v-for="(data, i) in mealsResult">
+        <p>RECIPE: [[data?.recipe?.label]]</p> 
+        <p><img v-bind:src="[[data?.recipe?.image]]" alt="Food Image"></p>
+        <p><a v-bind:href="data?.recipe?.url">[[data?.recipe?.url]]</a></p>
+    </li>
+    <footer>
+        <div id="edamam-badge" data-color="white"></div>    
+    </footer>
+    
+</div>
+
+{% endblock %}

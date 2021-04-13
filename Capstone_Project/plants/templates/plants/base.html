@@ -9,6 +9,7 @@
     <title>GoodFood-RealFood</title>
     <link rel="stylesheet" href="{% static 'plants/style.css' %}">
     <script defer src="{% static 'plants/main.js' %}"></script>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -32,6 +33,7 @@
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-instagram"></a>
                 <a href="#" class="fa fa-twitter"></a>
+                <a href="{% url 'plants:dashboard' %}">DASHBOARD</a>
             </nav>
         </div>
     </div>

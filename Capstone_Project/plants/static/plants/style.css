@@ -8,6 +8,23 @@ body{
   height: 100vh;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  z-index: 0;
+  background-repeat: no-repeat;
+}
+
+body::after {
+  /* background-image: url("https://www.pennington.com/-/media/Images/Pennington2-NA/US/blog/fertilizer/How-to-grow-an-organic-vegetable-garden/Bunch-of-fresh-veggies-h.jpg?h=480&la=en&w=1140&hash=B86177ADDF67F3E8659716962AE1AE98CA05E5A3"); */
+  content: "";
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .gardenPic {
@@ -23,10 +40,7 @@ body{
     text-align: center;
     text-transform: uppercase;
     padding: 0.5em;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("https://www.pennington.com/-/media/Images/Pennington2-NA/US/blog/fertilizer/How-to-grow-an-organic-vegetable-garden/Bunch-of-fresh-veggies-h.jpg?h=480&la=en&w=1140&hash=B86177ADDF67F3E8659716962AE1AE98CA05E5A3");
-}
+    }
 
 /* Header Styling */
 .header {
@@ -168,16 +182,17 @@ figcaption {
 
 /* Footer Styling */
  .footer {
+  height: 20vh;
   text-align: center;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100vw;
-  background-color: blue;
+  background-color: #7AA354;
   color: white;
 }
 
 .above { 
   position: absolute; top: -40px;
-  color: blue;
+  color: #7AA354;
 }

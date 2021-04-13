@@ -110,17 +110,17 @@ td {
   animation-duration: 8s;
   animation-timing-function: steps(4);
   animation-iteration-count: infinite;
-  -webkit-transition: all 2s ease-out;
+  /* -webkit-transition: all 2s ease-out;
   -moz-transition: all 2s ease-out;
   -o-transition: all 2s ease-out;
-  transition: all 2s ease-out;
+  transition: all 2s ease-out; */
 }
 
 td:hover {
   background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png');
-  background-position: center;
   background-repeat: repeat;
-  background-size: cover;
+  background-size: 225%, 10%;
+  background-position: center;
   cursor: pointer;
 }
 @keyframes td {

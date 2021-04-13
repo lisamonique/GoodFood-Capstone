@@ -7,12 +7,6 @@
     <h1>Vegetable & Fruit Search</h1>
     <h2>[[message]]</h2>
     <br>
-    <!-- <select v-model="selectedCategory"  name="" id="">
-        <option v-for='ingr in ingrResult' :value="categoryLabel">Food</option>
-        <option v-for='ingr in ingrResult' :value="categoryLabel">Meal</option>
-        <option v-for='category in categories' :value="category.categoryLabel">[[category?.food?.categoryLabel]]</option>
-    </select>
-    <button @click="searchIngr">CHOOSE</button> -->
     <div>
         <div>
             <input type="text" v-model="userQuery"  type="text" placeholder="Search for food...">
@@ -49,9 +43,13 @@
             <figure v-for="(data, i) in ingrResult">
                 <img v-bind:src="[[data?.food?.image]]" alt="Food Image">
                 <a href="#"><figcaption>[[data?.food?.label]]</figcaption></a> 
+                <button id="add">+</button>
             </figure>
         </div>
     </div>
+    <footer>
+        <div id="edamam-badge" data-color="white"></div>    
+    </footer>
     
 
 </div>
