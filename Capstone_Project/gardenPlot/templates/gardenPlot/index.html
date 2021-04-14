@@ -18,7 +18,11 @@
     <script defer src="{% static 'gardenPlot/main.js' %}"></script>
 </head>
 <body>
+    {% if user.is_authenticated %}
+        
+
     <div class="header" id="myHeader">
+        
         <h1>Header: {{ message }}</h1>
         <div class="topNav">
             <nav class="navBar">
@@ -34,10 +38,10 @@
                 </nav>
         </div>
     </div>
-
-    <!-- animation container -->
-<div class="eye-animation"></div>
-
+    <div>
+        <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
+        <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
+    </div>
 
     <div class="plot">
         <h2>Watch your seeds blossom into plants!</h2>
@@ -131,5 +135,6 @@
             }
         }
     </script>
+    {% endif %}
 </body>
 </html>

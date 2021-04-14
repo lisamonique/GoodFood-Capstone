@@ -31,11 +31,11 @@
 
     <div class="wrapper">
         <div class="entry">
-            <figure v-for="(data, i) in ingrResult">
+            <div class="entry1" v-for="(data, i) in ingrResult">
                 <img v-bind:src="[[data?.food?.image]]" alt="Food Image">
-                <a href="#"><figcaption>[[data?.food?.label]]</figcaption></a> 
-                <button id="add">+</button>
-            </figure>
+                <h2 class="title">Food Item</h2>
+                <a class="view-btn" href="#"><figcaption>[[data?.food?.label]]</figcaption></a> 
+            </div>
         </div>
     </div>
     <footer>

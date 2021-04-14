@@ -10,16 +10,20 @@ import random
 
 
 def index(request):
-    quiz_question = Question.objects.all()
-    quiz_answer = Answer.objects.all()
+    if request.method == "GET":
+        error = request.GET.get('error', '')
 
     context = {
         'message': 'Welcome to Flashcard Quiz Game',
-        "quiz_question": quiz_question,
-        "quiz_answer": quiz_answer
+        'error': error
     }
-    return render(request, 'quizGame/index.html', context)
+    quiz_question = Question.objects.all()
+    quiz_answer = Answer.objects.all()
 
+    if request.user.is_authenticated:
+        return render(request, 'quizGame/index.html', context)
+    else:
+        return HttpResponseRedirect(reverse('login_user'))
 
 def getQuiz(request):
     questions = list(Question.objects.all().values())
