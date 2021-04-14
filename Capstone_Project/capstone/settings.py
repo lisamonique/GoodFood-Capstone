@@ -25,7 +25,9 @@ SECRET_KEY = 'f!8=0*-7g8e7$g%8nk@h4jr=e38wn=8tsd0u@@wj_mtwhrq299'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'goodfoodrealfood.herokuapp.com'
+]
 
 
 # Application definition
