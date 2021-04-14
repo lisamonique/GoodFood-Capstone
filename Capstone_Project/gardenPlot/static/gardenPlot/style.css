@@ -78,52 +78,47 @@ tr {
   width: 100px;
   font-size: 1.5em;
   font-weight: bold;
-  color: rgb(156, 156, 156);
-  text-align: center;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-tr:nth-child(1){
-  background-color: red;
-  animation-delay: 6s;
-}
-tr:nth-child(2){
-  background-color: orange;
-  animation-delay: 4s;
-}
-tr:nth-child(3){
-  background-color: yellow;
-  animation-delay: 2s;
-}
-tr:nth-child(4){
-  background-color: greenyellow;
-  animation-delay: 0;
-}
-
-td {
+/* ROW HEADER STYLING */
+.row1 > th, .row2 > th, .row3 > th, .row4 > th {
+  background-image: url('../images/garden_stake2.png');
+  background-repeat: no-repeat; 
+  background-size: 90%, 10%;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1em;
   width: 150px;
   height: 150px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  animation-name: td;
+}
+
+/* RASPBERRY STYLING */
+.row1 > td {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: row1;
   animation-duration: 8s;
   animation-timing-function: steps(4);
   animation-iteration-count: infinite;
-  /* -webkit-transition: all 2s ease-out;
-  -moz-transition: all 2s ease-out;
-  -o-transition: all 2s ease-out;
-  transition: all 2s ease-out; */
 }
 
-td:hover {
-  background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png');
+.row1:hover > td {
+  /* background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png'); */
   background-repeat: repeat;
   background-size: 225%, 10%;
   background-position: center;
   cursor: pointer;
 }
-@keyframes td {
+@keyframes row1 {
   0%{
     background-image: url('../images/Untitled1_20210412142606.png');
   }
@@ -141,49 +136,116 @@ td:hover {
   }
 }
 
-
-
-/* // animation container */
-.animation-title {
-  font-family: sans-serif;
-  text-align: center;
-}
-
-.eye-animation {  
-  /* // place in the middle of the screen */
-  margin: auto;
-  
-  width: 300px;
-  height: 300px;
-  
-  /* // we set the horizontal size to 1800% because we have 18 / */
-  background-image: url('../images/Untitled1_20210412142606.png'), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png') ;
-  background-size: 225%, 10%;
-  background-position: center;
-  
-  /* // 'animation-timing-function' ensures users won’t see half of one frame and half of the following frame both at the same time
-  // we set the number of steps to 17 because we have 18 frames  */
-  animation-name: eye-fill;
+/* CARROT Styling */
+.row2 > td {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: row2;
   animation-duration: 8s;
-  animation-timing-function: steps(4);
+  animation-timing-function: steps(5);
   animation-iteration-count: infinite;
 }
 
-/* // during the animation we move the background-image from left to right */
-@keyframes eye-fill {
+.row2:hover > td {
+  /* background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png'); */
+  background-repeat: repeat;
+  background-size: 225%, 10%;
+  background-position: center;
+  cursor: pointer;
+}
+@keyframes row2 {
   0%{
-    background-image: url('../images/Untitled1_20210412142606.png');
+    background-image: url('../images/carrot_blossom.png');
   }
   25%{
-    background-image: url('../images/Untitled1_20210412142618.png');
+    background-image: url('../images/carrot_blossom2.png');
   }
   50%{
-    background-image: url('../images/Untitled1_20210412142626.png');
+    background-image: url('../images/carrot_blossom3.png');
   }
   75%{
-    background-image: url('../images/Untitled1_20210412142632.png');
+    background-image: url('../images/carrot_blossom4.png');
   }
   100%{
-    background-image: url('../images/Untitled1_20210412142638.png');
+    background-image: url('../images/carrot_blossom5.png');
+  }
+}
+
+/* APPLE STYLING */
+.row3 > td {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: row3;
+  animation-duration: 8s;
+  animation-timing-function: steps(5);
+  animation-iteration-count: infinite;
+}
+
+.row3:hover > td {
+  /* background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png'); */
+  background-repeat: repeat;
+  background-size: 225%, 10%;
+  background-position: center;
+  cursor: pointer;
+}
+@keyframes row3 {
+  0%{
+    background-image: url('../images/apple_blossom.png');
+  }
+  25%{
+    background-image: url('../images/apple_blossom2.png');
+  }
+  50%{
+    background-image: url('../images/apple_blossom3.png');
+  }
+  75%{
+    background-image: url('../images/apple_blossom4.png');
+  }
+  100%{
+    background-image: url('../images/apple_blossom5.png');
+  }
+}
+
+/* BELL PEPPER STYLING */
+.row4 > td {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: row4;
+  animation-duration: 8s;
+  animation-timing-function: steps(5);
+  animation-iteration-count: infinite;
+}
+
+.row4:hover > td {
+  /* background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png'); */
+  background-repeat: repeat;
+  background-size: 225%, 10%;
+  background-position: center;
+  cursor: pointer;
+}
+@keyframes row4 {
+  0%{
+    background-image: url('../images/carrot_blossom.png');
+  }
+  25%{
+    background-image: url('../images/carrot_blossom2.png');
+  }
+  50%{
+    background-image: url('../images/carrot_blossom3.png');
+  }
+  75%{
+    background-image: url('../images/carrot_blossom4.png');
+  }
+  100%{
+    background-image: url('../images/carrot_blossom5.png');
   }
 }

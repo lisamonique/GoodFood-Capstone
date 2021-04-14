@@ -44,6 +44,19 @@
     <div class="message">
       <h1>{{ message }}</h1>
     </div>
+    <div id="app">
+      <div v-for="question in questions" class="flashcard">
+        <h3>[[question.question]]</h3>
+        <div v-for="answer in question.answers">
+          <input :id="answer.veggie_answer" type="radio" :name="question.question">
+          <label for="answer.veggie_answer">[[answer.veggie_answer]]</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="message">
+      <h1>{{ message }}</h1>
+    </div>
 
     <article class="flashcard">
       <input id="flashcard-1" type="checkbox"/>
@@ -65,7 +78,7 @@
     
   </div>
 </div>
-<footer class="footer">
+<!-- <footer class="footer">
   <img class="above" src='https://lh3.googleusercontent.com/proxy/l3NfZbKHK_sSZaw034vwF7xlBcAHQke5ZGlG3wzFMzXkCCZ3kWtA0e73vrW2_nZnmdUP75arXDNvBl8EioqfqZiejWww1R9DC67bYiIdRagBltq7rGHCBeh_gME-HrNZ5KIWJVt9' alt="Farm Footer">  
   <p>Footer</p>
   <div>
@@ -102,10 +115,7 @@
       <a href="#" class="fa fa-youtube"></a>
       <a href="#" class="fa fa-instagram"></a>
   </div>
-</footer>
-  {% else %}
-  <a href="{% url 'login_user' %}">Login</a>
-  <a href="{% url 'register' %}">Sign Up</a>
+</footer> -->
   {% endif %} 
 
     <script>

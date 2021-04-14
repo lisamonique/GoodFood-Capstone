@@ -49,3 +49,24 @@ checkButton.addEventListener('click', function() {
 nextButton.addEventListener('click', function() {
     getRandomWord();
 });
+
+let app = new Vue({
+    el: '#app',
+    delimiters: ['[[', ']]'],
+    data: {
+        questions: []
+    },
+    methods: {
+        getQuiz: async function () {
+            let response = await axios({
+                method: 'get',
+                url: './getQuiz/'
+            })
+            this.questions = response.data.questions
+            console.log(this.questions)
+        }
+    },
+    created: function () {
+        this.getQuiz()
+    }
+})

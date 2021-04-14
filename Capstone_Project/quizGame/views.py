@@ -4,6 +4,7 @@ import json
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from .models import Question, Answer
+import random
 
 # Create your views here.
 
@@ -11,40 +12,43 @@ from .models import Question, Answer
 def index(request):
     quiz_question = Question.objects.all()
     quiz_answer = Answer.objects.all()
-    
-    if request.method == "GET":
-        error = request.GET.get('error', '')
 
     context = {
         'message': 'Welcome to Flashcard Quiz Game',
         "quiz_question": quiz_question,
-        "quiz_answer": quiz_answer,
-        'error': error
+        "quiz_answer": quiz_answer
     }
-    if request.user.is_authenticated:
-        return render(request, 'quizGame/index.html', context)
-    else:
-        return HttpResponseRedirect(reverse('login_user'))
-        # return HttpResponseRedirect(reverse('plants:index') + '?error=You Are Not Logged In!')
+    return render(request, 'quizGame/index.html', context)
+
 
 def getQuiz(request):
+    questions = list(Question.objects.all().values())
 
-    with open('fruitveggie.json', 'r') as file:
-            data = file.read()
+    response = {'questions': []}
+    for question in questions:
+        answers = list(Answer.objects.filter(
+            question=question['id']).values('veggie_answer'))
+        correct_answer = list(Answer.objects.filter(
+            question=question['id'], correct=True).values())
 
-    veggie_data = json.loads(data)
-    # Question.objects.all().delete()
-    # Answer.objects.all().delete()
-    print(veggie_data)
+        if len(correct_answer) > 0:
+            correct_answer = correct_answer[0]['veggie_answer']
+        else:
+            correct_answer = ''
+        response['questions'].append({
+            'question': question['veggie_question'],
+            'answers': answers,
+            'correctAnswer': correct_answer
+        })
 
-    for info in veggie_data:
-        food = Question()
-        food.veggie_question = info['veggie_question']
-        food.save()
-        db_types = []
-        for answer in info['answers']:
-            obj, created = Answer.objects.get_or_create(veggie_answer=answer, question=food)
-            db_types.append(obj)
-        # print(food)
+    return JsonResponse(response, safe=False)
 
-    return JsonResponse(veggie_data)
+
+def getQuestion(request):
+    quiz_question = Question.objects.all()
+    response = {'data': []}
+    for mon in quiz_question:
+        response['data'].append({
+            'veggie_question': mon.veggie_question
+        })
+    return JsonResponse(response)

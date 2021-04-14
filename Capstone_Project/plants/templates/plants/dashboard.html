@@ -3,6 +3,11 @@
 {% block plants %}
 <div id="recipeDataBase">
 
+    {% if user.is_authenticated %}
+    <div>
+        <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
+        <h3><a href="{% url 'profile' %}">MEMEBER Home </a></h3> 
+    </div>
 
     <h1>USER DASHBOARD</h1>
     <h2>[[message]]</h2>
@@ -23,7 +28,7 @@
     <footer>
         <div id="edamam-badge" data-color="white"></div>    
     </footer>
-    
+    {% endif %}
 </div>
 
 {% endblock %}
