@@ -1,2 +1,2 @@
-release: python manage.py migrate
-web: gunicorn Capstone_Project.wsgi --log-file -
+release: python Capstone_Project/manage.py migrate
+web: cd Capstone_Project && gunicorn capstone.wsgi --log-file -
