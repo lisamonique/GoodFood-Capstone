@@ -1,0 +1,179 @@
+/* Flashcard Styling */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #ffffff;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.message{
+    text-align: center;
+    padding: 1em;
+}
+
+html {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+article.flashcard {
+    margin: 0px auto;
+    border: 1px rgba(255, 255, 255, 0.03) solid;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 400px;
+    border: solid black 7px;
+}
+
+article.flashcard input[type="checkbox"] {
+    display: none;
+}
+
+article.flashcard input[type="checkbox"]:checked ~ label section.front {
+    height: 0%;
+}
+
+article.flashcard input[type="checkbox"]:checked ~ label section.back {
+    height: 100%;
+}
+
+article.flashcard label {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+article.flashcard section {
+    display: block;
+    text-align: center;
+    line-height: 400px;
+    width: 100%;
+    transition: all 0.9s linear 0s;
+    overflow: hidden;
+}
+
+article.flashcard section.front {
+    color: black;
+    background: #eeb902;
+    height: 100%;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: inherit;
+}
+
+article.flashcard section.back {
+    color: blanchedalmond;
+    background: #0ead69;
+    height: 0%;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+
+/* Header Styling */
+.header {
+    padding: 10px 16px;
+    background: #08BDBD;
+    color: #f1f1f1;
+    text-align: center;
+}
+  
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+    background: none;
+    color:black;
+}
+
+.fa-youtube {
+    background: none;
+    color:black;
+}
+
+.fa-instagram {
+    background: none;
+    color:black;
+}
+
+.fa-facebook {
+    background-color: none;
+    color: black;
+}
+
+/* Select Styling */
+/* #generate {
+    text-align: center;
+    padding: 1em;
+} */
+
+
+/* Second Flashcard Game */
+
+/* #term {
+    border: solid 5px black;
+    border-radius: 15px;
+    text-align: center;
+    width: 45%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#definition {
+    border: solid 5px black;
+    border-radius: 15px;
+    text-align: center;
+    width: 45%;
+    margin: auto;
+    margin-top: 100px;
+    display: none;
+} */
+
+#button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    color: white;
+    background-color: rgb(83, 235, 83);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#check {
+    display: none;
+}

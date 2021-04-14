@@ -1,0 +1,98 @@
+{% extends 'plants/base.html' %}
+
+{% block plants %}
+<!-- <body> -->
+
+    <div class="content">
+        <section class="square1">
+            empty space
+        </section>
+        <section class="options">
+            {% if error %}
+            {{error}}
+            {% endif %}
+            <p>Wanna Play?</p>
+            <a href="{% url 'quizGame:index' %}">CLICK ME</a>
+        </section>
+        <section class="options">
+            <p>Learn More</p>
+            <a href="{% url 'plants:foodData' %}">open</a>
+        </section>
+        <section class="options">
+            {% if error %}
+            {{error}}
+            {% endif %}
+            <p>Fruits & Vegetables</p>
+            <a href="{% url 'gardenPlot:index' %}">CLICK ME</a>
+        </section>
+        <section class="square2">
+            empty space
+        </section>
+    </div>
+
+    <div class="summary">
+        <h3>Summary about Fruits and Vegetables</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
+        <hr>
+        <img class="tree" src="https://picsum.photos/200/300" alt="picsum image">
+    </div>
+<!-- </body> -->
+{% endblock %}

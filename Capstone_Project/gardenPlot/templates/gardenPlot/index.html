@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Plot</title>
+    <!-- Vue -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.common.dev.min.js"
+        integrity="sha512-PkyFg1MEb/EwsFAqzqvZqWdMT4ItV+E1NgOtfBC9X8UecJcO9bwirD+v/9tJwci4wTNHdNYBk4ev6ceb1hy73g=="
+        crossorigin="anonymous"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link rel="stylesheet" href="{% static 'gardenPlot/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="{% static 'gardenPlot/main.js' %}"></script>
+</head>
+<body>
+    <div class="header" id="myHeader">
+        <h1>Header: {{ message }}</h1>
+        <div class="topNav">
+            <nav class="navBar">
+                <a href="{% url 'plants:index' %}">Home</a>
+                <a href="#">YouTube</a>
+                <a href="{% url 'plants:aboutPage' %}">About</a>
+                <a href="{% url 'login_user' %}">Member Login</a>
+                <a href="{% url 'register' %}">Join Us</a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                </nav>
+        </div>
+    </div>
+
+    <!-- animation container -->
+<div class="eye-animation"></div>
+
+
+    <div class="plot">
+        <h2>Watch your seeds blossom into plants!</h2>
+        <h5>Roll Your Mouse Across The Spaces</h5>
+        <table class="innerplot">
+        <tr class="row1">
+            <th>ROW 1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="row2">
+            <th>ROW 2</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="row3">
+            <th>ROW 3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="row4">
+            <th>ROW 4</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    </div>
+
+    <footer class="footer">
+        <img class="above" src='https://lh3.googleusercontent.com/proxy/l3NfZbKHK_sSZaw034vwF7xlBcAHQke5ZGlG3wzFMzXkCCZ3kWtA0e73vrW2_nZnmdUP75arXDNvBl8EioqfqZiejWww1R9DC67bYiIdRagBltq7rGHCBeh_gME-HrNZ5KIWJVt9' alt="Farm Footer">  
+        <p>Footer</p>
+        <div>
+            <h3>About</h3>   
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod minima neque enim facilis corporis explicabo quos non distinctio iure, quasi incidunt ducimus optio ex quisquam? Consequuntur, sapiente id. Perspiciatis, libero!</p>
+            <a href="{% url 'plants:aboutPage' %}">READ MORE</a>
+        </div>
+        <div>
+            <h3>Information</h3>
+            <ul>
+                <li><a href="#">Legal Notice</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <p class="copyright">Copyright ©2021 - All Rights. Reserved</p>    
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Site Map</a></li>
+            </ul>
+        </div>
+        <div class="siteinfo">
+            <h3>Get In</h3>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            } else {
+            header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>

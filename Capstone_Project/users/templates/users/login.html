@@ -1,0 +1,17 @@
+{% extends 'users/base.html' %}
+
+{% block users %}
+<body class="loginregister">
+    <div class="content" >
+        {% if error %}
+        {{error}}
+        {% endif %}
+        <form action="{% url 'login_user' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username: " value="{{username}}">
+            <input type="password" name="password" placeholder="Password: ">
+            <input type="submit" value="Login">
+        </form>
+    </div>  
+</body>
+{% endblock %}

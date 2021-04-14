@@ -1,0 +1,39 @@
+{% extends 'users/base.html' %}
+
+{% block users %}
+<div>
+   {% if user.is_authenticated %}
+   <div>
+       <h2>MEMBER HOME</h2>
+       <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
+       <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
+   </div>
+    
+    <h1>HELLO, {{ user }}!</h1>
+    <hr>
+    <div class="content">
+        <section class="square1">
+
+        </section>
+        <section class="options">
+            <p>Wanna Play?</p>
+            <a href="{% url 'quizGame:index' %}">CLICK ME</a>
+        </section>
+        <section class="options">
+            <p>Learn More</p>
+            <a href="{% url 'plants:foodData' %}">open</a>
+        </section>
+        <section class="options">
+            <p>Fruits & Vegetables</p>
+            <a href="{% url 'gardenPlot:index' %}">CLICK ME</a>
+        </section>
+        <section class="square2">
+
+        </section>
+    </div>
+    {% else %}
+    <a href="{% url 'login_user' %}">Login</a>
+    <a href="{% url 'register' %}">Sign Up</a>
+    {% endif %} 
+</div>
+{% endblock %}
