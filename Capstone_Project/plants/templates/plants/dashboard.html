@@ -4,73 +4,31 @@
 <div id="recipeDataBase">
 
     {% if user.is_authenticated %}
-    <div>
+    <div class="navbar">
+        <h3>{{ user }} DASHBOARD</h23>
+        <h3><a href="{% url 'profile' %}">GO Home </a></h3>
         <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
-        <h3><a href="{% url 'profile' %}">MEMEBER Home </a></h3> 
     </div>
 
-    <h1>USER DASHBOARD</h1>
-    <h2>[[message]]</h2>
-    <br>
-    <div>
-        <div>
-            <input type="text" v-model="userQuery"  type="text" placeholder="Search for Recipes...">
-            <button v-on:click="searchMeals">Search</button> 
-        </div>
+    <div class="title">
+        <h3>Food Recipe Search</h3> 
+        <input type="text" v-model="userQuery"  type="text" placeholder="Search Your Recipe...">
+        <button v-on:click="searchMeals">Search</button> 
     </div>
+    
     <div class="entry">
-        <div class="entry1" v-for="(data, i) in mealsResult">
-            <p>[[data?.recipe?.label]]</p> 
-            <p><img v-bind:src="[[data?.recipe?.image]]" alt="Food Image"></p>
-            <p><a v-bind:href="data?.recipe?.url">[[data?.recipe?.url]]</a></p>
+        <div class="entry1" v-for="(data, i) in mealsResult" v-if="mealsResult.length > 0">
+            <img v-bind:src="[[data?.recipe?.image]]" alt="Food Image">
+            <div class="entry2">
+                <h3>[[data?.recipe?.label]]</h3> 
+                <p><a v-bind:href="data?.recipe?.url">Get Recipe!</a></p>
+            </div>
         </div>    
     </div>
-
-        <!-- !PAGE CONTENT! -->
-    <!-- <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px"> -->
-
-        <!-- First Photo Grid-->
-        <!-- <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-        <div class="w3-quarter" v-for="(data, i) in mealsResult">
-            <img v-bind:src="[[data?.recipe?.image]]" alt="Food Image" style="width:25%">
-            <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        </div>
-        <div class="w3-quarter">
-            <img src="/w3images/steak.jpg" alt="Steak" style="width:100%">
-            <h3>Let Me Tell You About This Steak</h3>
-            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        </div>
-        <div class="w3-quarter">
-            <img src="/w3images/cherries.jpg" alt="Cherries" style="width:100%">
-            <h3>Cherries, interrupted</h3>
-            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-            <p>What else?</p>
-        </div>
-        <div class="w3-quarter">
-            <img src="/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
-            <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        </div>
-        </div> -->
-    
-        <!-- Pagination -->
-        <div class="w3-center w3-padding-32">
-        <div class="w3-bar">
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-            <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-        </div>
-    </div>
-
 
     <footer>
         <div id="edamam-badge" data-color="white"></div>    
     </footer>
     {% endif %}
 </div>
-
 {% endblock %}

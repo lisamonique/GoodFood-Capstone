@@ -2,14 +2,13 @@ let foodDataBase = new Vue({
     el: "#foodDataBase",
     delimiters: ['[[', ']]'],
     data: {
-        message: 'Food Database',
+        message: 'Food Library',
         userQuery: '',
         categories: '',
         selectedCategory: '',
-        ingrResult: [{
-            label: '',
-            image: ''
-        }]
+        ingrResult: [
+        
+        ]
     },
     methods: {
         searchIngr: async function() {
@@ -21,7 +20,7 @@ let foodDataBase = new Vue({
                     categoryLabel: this.selectedCategory
                 }
             })
-            // console.log(response.data.hints)
+            console.log(response.data.hints)
             this.ingrResult = response.data.hints
         }
     },
@@ -39,7 +38,7 @@ let recipeDataBase = new Vue({
     el: "#recipeDataBase",
     delimiters: ['[[', ']]'],
     data: {
-        message: 'Recipe/Meals Database',
+        message: 'Food Recipe Search',
         userQuery: '',
         categories: '',
         selectedCategory: '',
@@ -74,3 +73,17 @@ let recipeDataBase = new Vue({
         this.categories = response.data.hits
     }
 })
+
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+    } else {
+    header.classList.remove("sticky");
+    }
+}

@@ -1,6 +1,7 @@
 {% extends 'users/base.html' %}
-
+{% load static %}
 {% block users %}
+
 <div>
    {% if user.is_authenticated %}
    <div>
@@ -12,9 +13,6 @@
     <h1>HELLO, {{ user }}!</h1>
     <hr>
     <div class="content">
-        <section class="square1">
-
-        </section>
         <section class="options">
             <p>Wanna Play?</p>
             <a href="{% url 'quizGame:index' %}">CLICK ME</a>
@@ -27,9 +25,16 @@
             <p>Fruits & Vegetables</p>
             <a href="{% url 'gardenPlot:index' %}">CLICK ME</a>
         </section>
-        <section class="square2">
-
-        </section>
+    </div>
+    <div class="seedPic">
+        <div>
+            <img src="{% static 'users/images/Apple_seeds.jpg' %}" alt="apple seed">
+            <img src="{% static 'users/images/beet_seed.jpg' %}" alt="beet seed">
+            <img src="{% static 'users/images/broccoli_seed.jpg' %}" alt="broccoli seed">
+            <img src="{% static 'users/images/corn_seed.jpeg' %}" alt="corn seed">
+            <img src="{% static 'users/images/lettuce_seed.jpg' %}" alt="lettuce seed">
+            <img src="{% static 'users/images/collard_seed.jpg' %}" alt="collard">
+        </div>
     </div>
     {% endif %} 
 </div>

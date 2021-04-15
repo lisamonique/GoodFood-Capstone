@@ -3,41 +3,34 @@
 {% block plants %}
 <div id="foodDataBase">
 
-
-    <h1>Vegetable & Fruit Search</h1>
-    <h2>[[message]]</h2>
-    <br>
-    <div>
-        <div>
-            <input type="text" v-model="userQuery"  type="text" placeholder="Search for food...">
-            <button v-on:click="searchIngr">Search</button> 
-        </div>
+    <div class="navbar">
+        <h3>MEMBER HOME</h3>
+        <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
+        <h3><a href="{% url 'profile' %}">GO HOME</a></h3>
+        <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
     </div>
-    <!-- <h2>"[[ingrResult.length]]" SEARCH RESULTS FOUND</h2>
-    <br>
-    <h4>You searched for: [[userQuery]]</h4>
-    <br>
-    <h5><a href="{% url 'plants:index' %}">Home</a> > <a href="#">Search results for [[userQuery]]</a></h5>
-    <br> -->
 
-    <!-- <div>
-        <div>
-            <h2>Title of "Food Searched"</h2>   
-            <p>Information about "food searched". Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta.</p>
-            <a href="#">More Info</a>
-        </div>
-    </div> -->
-    <br>
-
-    <div class="wrapper">
-        <div class="entry">
-            <div class="entry1" v-for="(data, i) in ingrResult">
-                <img v-bind:src="[[data?.food?.image]]" alt="Food Image">
-                <h2 class="title">Food Item</h2>
-                <a class="view-btn" href="#"><figcaption>[[data?.food?.label]]</figcaption></a> 
+    <div class="title">
+        <h1>[[message]]</h1>
+        <h2>Vegetable & Fruit Search</h2>  
+        <input type="text" v-model="userQuery"  type="text" placeholder="Search for food...">
+        <button v-on:click="searchIngr">Search</button>
+        <h4>"[[ingrResult.length]]" SEARCH RESULTS FOUND</h4>  
+    </div>
+    
+    <div class="entry">
+        <div class="entry1" v-for="(data, i) in ingrResult" v-if="ingrResult.length > 0">
+            <img v-bind:src="[[data?.food?.image]]" alt="Food Image">
+            <div class="entry2">
+                <h3>[[data?.food?.label]]</h2>
+                <p>Energy: [[data?.food?.nutrients?.ENERC_KCAL]]</p>
+                <p>Carbs: [[data?.food?.nutrients?.CHOCDF]]</p>
+                <p>Protein: [[data?.food?.nutrients?.PROCNT]]</p>
+                <p>Fat: [[data?.food?.nutrients?.FAT]]</p>
             </div>
         </div>
     </div>
+
     <footer>
         <div id="edamam-badge" data-color="white"></div>    
     </footer>

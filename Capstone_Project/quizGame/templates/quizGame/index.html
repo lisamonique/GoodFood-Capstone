@@ -21,6 +21,7 @@
   {% if user.is_authenticated %}
   <div>
     <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
+    <h3><a href="{% url 'profile' %}">GO HOME</a></h3>
     <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
   </div>
 
@@ -78,47 +79,9 @@
     
   </div>
 </div>
-<!-- <footer class="footer">
-  <img class="above" src='https://lh3.googleusercontent.com/proxy/l3NfZbKHK_sSZaw034vwF7xlBcAHQke5ZGlG3wzFMzXkCCZ3kWtA0e73vrW2_nZnmdUP75arXDNvBl8EioqfqZiejWww1R9DC67bYiIdRagBltq7rGHCBeh_gME-HrNZ5KIWJVt9' alt="Farm Footer">  
-  <p>Footer</p>
-  <div>
-      <h3>About</h3>   
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod minima neque enim facilis corporis explicabo quos non distinctio iure, quasi incidunt ducimus optio ex quisquam? Consequuntur, sapiente id. Perspiciatis, libero!</p>
-      <a href="{% url 'plants:aboutPage' %}">READ MORE</a>
-  </div>
-  <div>
-      <h3>Information</h3>
-      <ul>
-          <li><a href="#">Legal Notice</a></li>
-          <li><a href="#">Lorem, ipsum.</a></li>
-          <li><a href="#">Lorem, ipsum.</a></li>
-          <li><a href="#">Lorem, ipsum dolor.</a></li>
-          <li><a href="#">Lorem, ipsum.</a></li>
-      </ul>
-  </div>
-  <hr>
-  <div>
-      <p class="copyright">Copyright ©2021 - All Rights. Reserved</p>    
-  </div>
-  <div>
-      <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Site Map</a></li>
-      </ul>
-  </div>
-  <div class="siteinfo">
-      <h3>Get In</h3>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-youtube"></a>
-      <a href="#" class="fa fa-instagram"></a>
-  </div>
-</footer> -->
   {% endif %} 
 
-    <script>
+    <!-- <script>
       window.onscroll = function() {myFunction()};
       
       var header = document.getElementById("myHeader");
@@ -131,7 +94,7 @@
           header.classList.remove("sticky");
           }
       }
-    </script>
+    </script> -->
 
 </body>
 </html>

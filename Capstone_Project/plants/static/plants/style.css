@@ -10,7 +10,6 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   position: relative;
-  margin: 0 auto;
   z-index: 0;
   background-repeat: no-repeat;
 }
@@ -35,29 +34,31 @@ body::after {
 
 .garden { 
   height: 75vh;
-    color: white;
-    font-size: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 0.5em;
-    }
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5em;
+}
 
 /* Header Styling */
 .header {
-    padding: 10px 16px;
-    background: #08BDBD;
-    color: #f1f1f1;
-    text-align: center;
+  padding: 10px 16px;
+  background: #08BDBD;
+  color: #f1f1f1;
+  text-align: center;
+  border-bottom: black solid 2px;
+  top: 0;
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
   
 .sticky + .content {
-    padding-top: 102px;
+  padding-top: 102px;
 }
 
 .fa {
@@ -118,40 +119,11 @@ body::after {
   );
 }
 
-.square1, .square2 {
-  border-radius: 0.5em;
-  background: white;
-  background-color: #540d6e;
-  width: 30vh;
-  height: 25vh;
-  background: linear-gradient(
-    to right bottom,
-    rgba(204, 48, 243, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-  border-radius: 2rem;
-}
-
-.square1 {
-  top: 50%;
-  right: 25%;
-}
-.square2 {
-  bottom: 15%;
-  left: 25%;
-}
-
 .summary {
   display: grid;
 }
 
-/* Food Results Styling */
-
-/* .wrapper {
-  margin-top: 50px;
-  width: 100vw;
-  border: black solid 5px;
-} */
+/* Food Results Styling || dashboard.html || food_data.html */
 .entry {
   width: 100%;
   border-radius: 8px;
@@ -160,20 +132,29 @@ body::after {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   border: #540d6e solid 5px;
 }
 .entry img {
-  width: 50%;
+  width: 100%;
   height: 300px;
-  border-radius: 4px;
 }
 .entry1 {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 300px;
+  padding: 0.5em;
   border: #eb1e95 solid 5px;
-  /* padding: 2em; */
+}
+
+.entry2 > h3, p {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: #08BDBD solid 4px;
+  text-decoration: none;
 }
 
 .wrapper .title {

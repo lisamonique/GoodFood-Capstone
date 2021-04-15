@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
         integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
         crossorigin="anonymous"></script>
+    <script defer src="{% static 'users/main.js' %}"></script>
 </head>
 
 <body>
@@ -34,7 +35,7 @@
             </nav>
         </div>
     </div>
-    <script>
+    <!-- <script>
         window.onscroll = function() {myFunction()};
         
         var header = document.getElementById("myHeader");
@@ -47,7 +48,7 @@
             header.classList.remove("sticky");
             }
         }
-    </script>
+    </script> -->
     {% block users %}
     {% endblock %}
 </body>

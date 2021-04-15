@@ -84,7 +84,7 @@ tr {
 
 /* ROW HEADER STYLING */
 .row1 > th, .row2 > th, .row3 > th, .row4 > th {
-  background-image: url('../images/garden_stake2.png');
+  background-image: url('..gardenPlot/images/garden_stake2.png');
   background-repeat: no-repeat; 
   background-size: 90%, 10%;
   background-position: center;
@@ -113,7 +113,7 @@ tr {
 
 .row1:hover > td {
   /* background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png'); */
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: 225%, 10%;
   background-position: center;
   cursor: pointer;
@@ -145,13 +145,13 @@ tr {
   margin-right: auto;
   animation-name: row2;
   animation-duration: 8s;
-  animation-timing-function: steps(5);
+  animation-timing-function: steps(4);
   animation-iteration-count: infinite;
 }
 
 .row2:hover > td {
   /* background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png'); */
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: 225%, 10%;
   background-position: center;
   cursor: pointer;
@@ -183,13 +183,13 @@ tr {
   margin-right: auto;
   animation-name: row3;
   animation-duration: 8s;
-  animation-timing-function: steps(5);
+  animation-timing-function: steps(4);
   animation-iteration-count: infinite;
 }
 
 .row3:hover > td {
   /* background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png'); */
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: 225%, 10%;
   background-position: center;
   cursor: pointer;
@@ -221,31 +221,31 @@ tr {
   margin-right: auto;
   animation-name: row4;
   animation-duration: 8s;
-  animation-timing-function: steps(5);
+  animation-timing-function: steps(4);
   animation-iteration-count: infinite;
 }
 
 .row4:hover > td {
   /* background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png'); */
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: 225%, 10%;
   background-position: center;
   cursor: pointer;
 }
 @keyframes row4 {
   0%{
-    background-image: url('../images/carrot_blossom.png');
+    background-image: url('../gardenPlot/images/bellpepper.png');
   }
   25%{
-    background-image: url('../images/carrot_blossom2.png');
+    background-image: url('../gardenPlot/images/bellpepper2.png');
   }
   50%{
-    background-image: url('../images/carrot_blossom3.png');
+    background-image: url('../gardenPlot/images/bellpepper3.png');
   }
   75%{
-    background-image: url('../images/carrot_blossom4.png');
+    background-image: url('../gardenPlot/images/bellpepper4.png');
   }
   100%{
-    background-image: url('../images/carrot_blossom5.png');
+    background-image: url('../gardenPlot/images/bellpepper5.png');
   }
 }
