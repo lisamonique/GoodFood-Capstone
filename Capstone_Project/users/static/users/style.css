@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
 .message {
     width: 65vw;
     height: 75vh;
@@ -110,30 +112,6 @@ background: linear-gradient(to right top, #65dfc9, #6cdbeb);
   );
 }
 
-.square1, .square2 {
-  border-radius: 0.5em;
-  background: white;
-  background-color: #540d6e;
-  width: 30vh;
-  height: 25vh;
-  background: linear-gradient(
-    to right bottom,
-    rgba(204, 48, 243, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-  border-radius: 2rem;
-  /* position: absolute; */
-}
-
-.square1 {
-  top: 50%;
-  right: 25%;
-}
-.square2 {
-  bottom: 15%;
-  left: 25%;
-}
-
 .summary {
   display: grid;
 }
@@ -141,9 +119,48 @@ background: linear-gradient(to right top, #65dfc9, #6cdbeb);
 .loginregister{
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Balsamiq Sans', cursive;
   background-image: url("https://media.istockphoto.com/photos/healthy-fresh-rainbow-colored-fruits-and-vegetables-background-picture-id1208790371?k=6&m=1208790371&s=612x612&w=0&h=FCAj7paMmtAYe4W-8j12fSh9fe2Uf1yt7CItAzMNLTA=");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+/* SEED STYLING */
+table{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+tr {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+.row1 > td img, .row2 > td img {
+  background-repeat: no-repeat; 
+  background-size: 90%, 10%;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row1:hover > td, .row2:hover > td {
+  background-repeat: no-repeat;
+  background-size: 100%, 10%;
+  background-position: center;
+  cursor: pointer;
 }

@@ -26,15 +26,20 @@
             <a href="{% url 'gardenPlot:index' %}">CLICK ME</a>
         </section>
     </div>
-    <div class="seedPic">
-        <div>
-            <img src="{% static 'users/images/Apple_seeds.jpg' %}" alt="apple seed">
-            <img src="{% static 'users/images/beet_seed.jpg' %}" alt="beet seed">
-            <img src="{% static 'users/images/broccoli_seed.jpg' %}" alt="broccoli seed">
-            <img src="{% static 'users/images/corn_seed.jpeg' %}" alt="corn seed">
-            <img src="{% static 'users/images/lettuce_seed.jpg' %}" alt="lettuce seed">
-            <img src="{% static 'users/images/collard_seed.jpg' %}" alt="collard">
-        </div>
+    
+    <div class="plot">    
+        <table class="innerplot">            
+            <tr class="row1">
+                <td><img src="{% static 'users/images/Apple_seeds.jpg' %}" alt="apple seed"></td>
+                <td><img src="{% static 'users/images/beet_seed.jpg' %}" alt="beet seed"></td>
+                <td><img src="{% static 'users/images/broccoli_seed.jpg' %}" alt="broccoli seed"></td>
+            </tr>
+            <tr class="row2">
+                <td><img src="{% static 'users/images/corn_seed.jpeg' %}" alt="corn seed"></td>
+                <td><img src="{% static 'users/images/lettuce_seed.jpg' %}" alt="lettuce seed"></td>
+                <td><img src="{% static 'users/images/collard_seed.jpg' %}" alt="collard"></td>
+            </tr>
+        </table>
     </div>
     {% endif %} 
 </div>

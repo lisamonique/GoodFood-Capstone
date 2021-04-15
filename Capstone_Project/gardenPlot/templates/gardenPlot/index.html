@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden Plot</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <!-- Vue -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.common.dev.min.js"
         integrity="sha512-PkyFg1MEb/EwsFAqzqvZqWdMT4ItV+E1NgOtfBC9X8UecJcO9bwirD+v/9tJwci4wTNHdNYBk4ev6ceb1hy73g=="
@@ -39,6 +43,7 @@
     </div>
     <div>
         <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
+        <h3><a href="{% url 'profile' %}">GO HOME</a></h3>
         <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
     </div>
 
@@ -79,6 +84,9 @@
             <td></td>
         </tr>
     </table>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio inventore beatae quo illum asperiores. Ex quod in esse aperiam nihil commodi totam quo modi sit odit. Velit ratione cumque nostrum facilis perspiciatis labore atque commodi architecto, voluptates veniam consequatur tempora tenetur consectetur laborum odit sunt repudiandae magni! Non quis explicabo voluptatibus accusamus? Nobis voluptatem aut temporibus voluptatum eligendi sed enim maiores eveniet consequuntur incidunt voluptatibus hic laboriosam rerum, natus id optio, quos maxime odio architecto esse placeat, consequatur ex. Culpa nesciunt sint repellendus adipisci ipsa provident in pariatur, ea perferendis nam architecto minus fugiat doloribus dignissimos, excepturi inventore a repellat.</p>
     </div>
     {% endif %}
 </body>

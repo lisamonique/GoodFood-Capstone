@@ -5,11 +5,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 body{
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Balsamiq Sans', cursive;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWpm4KTO64Bsgq79NnWT9KIi17p4KanmZZ8w&usqp=CAU");
 }
 
@@ -79,12 +79,12 @@ tr {
   font-size: 1.5em;
   font-weight: bold;
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
 /* ROW HEADER STYLING */
 .row1 > th, .row2 > th, .row3 > th, .row4 > th {
-  background-image: url('..gardenPlot/images/garden_stake2.png');
+  background-image: url('../gardenPlot/images/garden_stake2.png');
   background-repeat: no-repeat; 
   background-size: 90%, 10%;
   background-position: center;
@@ -120,19 +120,19 @@ tr {
 }
 @keyframes row1 {
   0%{
-    background-image: url('../images/Untitled1_20210412142606.png');
+    background-image: url('../gardenPlot/images/Untitled1_20210412142606.png');
   }
   25%{
-    background-image: url('../images/Untitled1_20210412142618.png');
+    background-image: url('../gardenPlot/images/Untitled1_20210412142618.png');
   }
   50%{
-    background-image: url('../images/Untitled1_20210412142626.png');
+    background-image: url('../gardenPlot/images/Untitled1_20210412142626.png');
   }
   75%{
-    background-image: url('../images/Untitled1_20210412142632.png');
+    background-image: url('../gardenPlot/images/Untitled1_20210412142632.png');
   }
   100%{
-    background-image: url('../images/Untitled1_20210412142638.png');
+    background-image: url('../gardenPlotimages/Untitled1_20210412142638.png');
   }
 }
 
@@ -158,19 +158,19 @@ tr {
 }
 @keyframes row2 {
   0%{
-    background-image: url('../images/carrot_blossom.png');
+    background-image: url('../gardenPlot/images/carrot_blossom.png');
   }
   25%{
-    background-image: url('../images/carrot_blossom2.png');
+    background-image: url('../gardenPlot/images/carrot_blossom2.png');
   }
   50%{
-    background-image: url('../images/carrot_blossom3.png');
+    background-image: url('../gardenPlot/images/carrot_blossom3.png');
   }
   75%{
-    background-image: url('../images/carrot_blossom4.png');
+    background-image: url('../gardenPlot/images/carrot_blossom4.png');
   }
   100%{
-    background-image: url('../images/carrot_blossom5.png');
+    background-image: url('../gardenPlot/images/carrot_blossom5.png');
   }
 }
 
@@ -196,19 +196,19 @@ tr {
 }
 @keyframes row3 {
   0%{
-    background-image: url('../images/apple_blossom.png');
+    background-image: url('../gardenPlot/images/apple_blossom.png');
   }
   25%{
-    background-image: url('../images/apple_blossom2.png');
+    background-image: url('../gardenPlot/images/apple_blossom2.png');
   }
   50%{
-    background-image: url('../images/apple_blossom3.png');
+    background-image: url('../gardenPlot/images/apple_blossom3.png');
   }
   75%{
-    background-image: url('../images/apple_blossom4.png');
+    background-image: url('../gardenPlot/images/apple_blossom4.png');
   }
   100%{
-    background-image: url('../images/apple_blossom5.png');
+    background-image: url('../gardenPlot/images/apple_blossom5.png');
   }
 }
 
