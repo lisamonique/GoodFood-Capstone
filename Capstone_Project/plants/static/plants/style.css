@@ -147,31 +147,33 @@ body::after {
 
 /* Food Results Styling */
 
-.wrapper {
+/* .wrapper {
   margin-top: 50px;
-  width: 50%;
-  display: grid;
-  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
-}
-
+  width: 100vw;
+  border: black solid 5px;
+} */
 .entry {
-  width: 50%;
+  width: 100%;
   border-radius: 8px;
   background-color: rgb(81, 238, 173);
   padding: 15px;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  border: #540d6e solid 5px;
 }
-
 .entry img {
-  width: 25%;
+  width: 50%;
   height: 300px;
   border-radius: 4px;
 }
-
 .entry1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 300px;
+  border: #eb1e95 solid 5px;
+  /* padding: 2em; */
 }
 
 .wrapper .title {
@@ -184,13 +186,8 @@ body::after {
 .view-btn {
   text-decoration: none;
   text-align: center;
-  width: 130px;
-  padding: 10px 0;
   color: black;
-  font-size: 1.4rem;
-  font-weight: 600;
   margin-top: 20px;
-  border-radius: 4px;
   align-self: flex-start;
 }
 

@@ -74,31 +74,3 @@ let recipeDataBase = new Vue({
         this.categories = response.data.hits
     }
 })
-
-// function buildCard(data) {
-//     const energy = data.nutrients.ENERC_KCAL ? `<li><b>Energy: </b><span>${data.nutrients.ENERC_KCAL.toFixed(1)}kcal</span></li>` : ''
-//     const carbs = data.nutrients.CHOCDF ? `<li><b>Carbs: </b><span>${data.nutrients.CHOCDF.toFixed(1)}g</span></li>` : ''
-//     const protein = data.nutrients.PROCNT ? `<li><b>Protein: </b><span>${data.nutrients.PROCNT.toFixed(1)}g</span></li>` : ''
-//     const fat = data.nutrients.FAT ? `<li><b>Fat: </b><span>${data.nutrients.FAT.toFixed(1)}g</span></li>` : ''
-
-//     const html = `
-//     <div class="card">
-//       <div class="card-header">
-//         <h3>${data.label}</h3>
-//         <h4>${data.category}</h4>
-//       </div>
-//       <div class="card-body">
-//         <ul>
-//           ${energy}
-//           ${carbs}
-//           ${protein}
-//           ${fat}
-//         </ul>
-//       </div>
-//       <div class="card-footer">
-//         <p><b>Brand: </b><span>${data.brand || 'None :('}</span></p>
-//       </div>
-//     </div>
-//     `
-
-//     return html
