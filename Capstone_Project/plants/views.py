@@ -7,25 +7,25 @@ import json
 
 def index(request):
     context = {
-        'message': 'Welcome to GoodFood RealFood'
+        'message': 'GARDEN LIGHT'
     }
     return render(request, 'plants/index.html', context)
 
 def aboutPage(request):
     context = {
-        "message": "GoodFood Mission"
+        "message": "GARDEN LIGHT"
     }
     return render(request, 'plants/about.html', context)
 
 def foodData(request):
     context = {
-        "message": 'GoodFood Search'
+        "message": 'GARDEN LIGHT'
     }
     return render(request, 'plants/food_data.html', context)
 
 def dashboard(request):
     context = {
-        'message': "GoodFood Dashboard"
+        'message': "GARDEN LIGHT"
     }
     return render(request, 'plants/dashboard.html', context)
 

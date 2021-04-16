@@ -1,92 +1,44 @@
 {% extends 'plants/base.html' %}
-
+{% load static %}
 {% block plants %}
 <!-- <body> -->
-
+    <div class="bannerImage">
+        <img src="{% static 'plants/images/banner_food_image.jpg' %}" alt="banner">
+        
+    </div>
     <div class="content">
         <section class="options">
             {% if error %}
             {{error}}
             {% endif %}
-            <p>Wanna Play?</p>
-            <a href="{% url 'quizGame:index' %}">CLICK ME</a>
+            <a href="{% url 'quizGame:index' %}">Flash Cards<img src="{% static 'plants/images/flashacard.png' %}" alt="flashcard"></a>
         </section>
         <section class="options">
-            <p>Learn More</p>
-            <a href="{% url 'plants:foodData' %}">open</a>
+            <a href="{% url 'plants:foodData' %}">Food Library</a>
+            <img src="{% static 'plants/images/book.webp' %}" alt="">
         </section>
         <section class="options">
             {% if error %}
             {{error}}
             {% endif %}
-            <p>Fruits & Vegetables</p>
-            <a href="{% url 'gardenPlot:index' %}">CLICK ME</a>
+            <a href="{% url 'gardenPlot:index' %}">Garden Plot<img src="{% static 'plants/images/garden_plot.png' %}" alt="garden plot"></a>
         </section>
     </div>
 
     <div class="summary">
-        <h3>Summary about Fruits and Vegetables</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, saepe.</p>
-        <hr>
-        <img class="tree" src="https://picsum.photos/200/300" alt="picsum image">
+        <div class="notes">
+            <div>
+                <h1>We've learned over the years that we should know more about our fruits and vegetables.</h1>
+            </div>
+            <div>
+                <h1>Fruits and vegetables are a great source of vitamins and minerals. You won’t find a better nutritional source than fruits and veggies, which are packed with vitamins A, C and E, as well as magnesium, zinc, phosphorous and folic acid.
+            </h1>  
+            </div>
+            <div>
+                <h4><a href="{% url 'plants:aboutPage' %}">ABOUT US</a></h4>
+            </div>
+        </div>
     </div>
+    
 <!-- </body> -->
 {% endblock %}

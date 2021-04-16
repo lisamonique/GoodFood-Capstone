@@ -1,10 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+body{
+  background-color: #E9E8E2;
+  color: #56523E;
+  height: 100vh;
+  display: block;
+  height: 100%;
+  margin: 0;
+  font-family: 'Balsamiq Sans', cursive;
+  text-decoration: none;
+  text-decoration-color: #668859;
+}
+
+/* Header Styling */
+.header {
+  padding: 10px 16px;
+  background: #668859;
+  color: #E9E8E2;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 3em;
+  margin-bottom: 2em;
+}
+
+.headerTitle {
+  font-size: 25px;
+  padding-bottom: 1em;
+}
+
+.topNav {
+  padding-bottom: 1em;
+}
+  
+.navBar > a {
+  text-decoration: none;
+  color: #E9E8E2 ;
+  padding-left: 1em;
+  padding-right: 1em;
+}
 
 .message {
     width: 65vw;
@@ -13,7 +53,7 @@
     border: black solid 8px;
     border-radius: 1em;
     overflow: hidden;
-    line-height: 68px;
+    margin-bottom: 2em;
 }
   
 .section1 {
@@ -23,97 +63,41 @@
     background: beige;
     display: grid;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     padding: 0.7em;
+    line-height: 70px;
 }
   
 .section2 {
-    float:left;
+    float:right;
     width:50%;
     overflow:hidden;
     background: white;
     display: grid;
     padding: 0.5em;
     text-align: left;
-    font-size: 20px;
-}
-
-.header {
-    padding: 10px 16px;
-    background: #08BDBD;
-    color: #f1f1f1;
-    text-align: center;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-  
-.sticky + .content {
-    padding-top: 102px;
-}
-
-.fa {
-    padding: 20px;
     font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-  }
-  
-  .fa:hover {
-    opacity: 0.7;
-  }
-  
-  .fa-twitter {
-    background: none;
-    color:black;
-  }
-  
-  .fa-youtube {
-    background: none;
-    color:black;
-  }
-  
-  .fa-instagram {
-    background: none;
-    color:black;
 }
 
-  .fa-facebook {
-    background-color: none;
-    color: black;
-  }
+.section4 {
+  width:100%;
+  overflow:hidden;
+  background: white;
+  display: grid;
+  padding: 0.5em;
+  text-align: left;
+  font-size: 30px;
+}
+
+
 
 .content {
-display: flex;
-justify-content: center;
-background-color: DodgerBlue;
-background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-}
-
-.options {
-  border-radius: 1.2em;
-  background-color: #540d6e;
-  width: 100vh;
-  min-height: 50vh;
-  margin: 50px;
-  color: whitesmoke;
-  text-align: center;
-  line-height: 175px;
-  font-size: 45px;
-  background: linear-gradient(
-    to right bottom,
-    rgba(204, 48, 243, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-}
-
-.summary {
-  display: grid;
+  width: 35vw;
+  height: 40vh;
+  margin: auto;
+  border: black solid 6px;
+  border-radius: 1em;
+  overflow: hidden;
 }
 
 .loginregister{
@@ -164,3 +148,101 @@ tr {
   background-position: center;
   cursor: pointer;
 }
+
+/* Register Styling */
+
+/* Right side */
+
+form {
+  display: grid;
+  align-items: left;
+  
+}
+
+.registerBtn {
+  width: 50%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #4CAF50;
+}
+
+.registerBtn2 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 14px;
+  width: 25%;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /*Safari*/
+  transition-duration: 0.4s;
+}
+.registerBtn2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.space > input {
+  display: inline-block;
+}
+
+/* profile PAGE STYLING */
+  /* Body Styling */
+  .content1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .options {
+    border-radius: 1.2em;
+    background-color: #540d6e;
+    width: 100vh;
+    min-height: 50vh;
+    margin: 50px;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 175px;
+    font-size: 45px;
+    background: linear-gradient(
+      to right bottom,
+      rgba(204, 48, 243, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+  }
+
+  /* FOOTER STYLING */
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  .fa-twitter {
+    background: none;
+    color:black;
+  }
+  
+  .fa-youtube {
+    background: none;
+    color:black;
+  }
+  
+  .fa-instagram {
+    background: none;
+    color:black;
+}
+
+  .fa-facebook {
+    background-color: none;
+    color: black;
+  }

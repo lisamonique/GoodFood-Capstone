@@ -25,36 +25,18 @@
 
 <body>
     <div class="header" id="myHeader">
-        <h1>Header: {{ message }}</h1>
+        <div class="headerTitle">
+            <h1>GARDEN LIGHT</h1>   
+        </div>
         <div class="topNav">
             <nav class="navBar">
                 <a href="{% url 'plants:index' %}">Home</a>
-                <a href="#">YouTube</a>
                 <a href="{% url 'plants:aboutPage' %}">About</a>
                 <a href="{% url 'login_user' %}">Member Login</a>
                 <a href="{% url 'register' %}">Join Us</a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-twitter"></a>
             </nav>
         </div>
     </div>
-
-    <!-- <script>
-        window.onscroll = function() {myFunction()};
-        
-        var header = document.getElementById("myHeader");
-        var sticky = header.offsetTop;
-        
-        function myFunction() {
-            if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-            } else {
-            header.classList.remove("sticky");
-            }
-        }
-    </script> -->
     {% block plants %}
     {% endblock %}
 </body>

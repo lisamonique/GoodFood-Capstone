@@ -1,111 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 
 body{
+  background-color: #E9E8E2;
+  color: #56523E;
   height: 100vh;
+  display: block;
+  height: 100%;
   margin: 0;
   font-family: 'Balsamiq Sans', cursive;
-  display: block;
-  position: relative;
-  z-index: 0;
-  background-repeat: no-repeat;
-}
-
-body::after {
-  /* background-image: url("https://www.pennington.com/-/media/Images/Pennington2-NA/US/blog/fertilizer/How-to-grow-an-organic-vegetable-garden/Bunch-of-fresh-veggies-h.jpg?h=480&la=en&w=1140&hash=B86177ADDF67F3E8659716962AE1AE98CA05E5A3"); */
-  content: "";
-  opacity: 0.9;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.gardenPic {
-  text-align: center;
-  color:whitesmoke;
-  line-height: 900px;
-}
-
-.garden { 
-  height: 75vh;
-  color: white;
-  font-size: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0.5em;
+  text-decoration: none;
+  text-decoration-color: #668859;
 }
 
 /* Header Styling */
 .header {
   padding: 10px 16px;
-  background: #08BDBD;
-  color: #f1f1f1;
+  color: #668859;
   text-align: center;
-  border-bottom: black solid 2px;
-  top: 0;
+  font-size: 18px;
+  padding-top: 3.5em;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-  
-.sticky + .content {
-  padding-top: 102px;
+.headerTitle {
+  font-size: 25px;
+  padding-bottom: 1em;
 }
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-  }
+.topNav {
+
+}
   
-  .fa:hover {
-    opacity: 0.7;
-  }
-  
-  .fa-twitter {
-    background: none;
-    color:black;
-  }
-  
-  .fa-youtube {
-    background: none;
-    color:black;
-  }
-  
-  .fa-instagram {
-    background: none;
-    color:black;
+.navBar > a {
+  text-decoration: none;
+  color: #668859 ;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
-  .fa-facebook {
-    background-color: none;
-    color: black;
-  }
-
-  /* Body Styling */
+/* Content Styling */
 .content {
   display: flex;
   justify-content: center;
-  background-color: DodgerBlue;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  align-items: center;
 }
 
 .options {
-  border-radius: 1.2em;
   background-color: #540d6e;
   width: 100vh;
   min-height: 50vh;
@@ -120,23 +66,44 @@ body::after {
     rgba(255, 255, 255, 0.3)
   );
 }
+ 
+.options > a {
+  text-decoration: none; 
+}
 
-.summary {
-  display: grid;
+.options > img {
+  overflow: hidden;
+}
+
+
+/* navbar */
+/* .navbar h3 {
+  float:left
+}
+.navbar h3 > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} */
+
+
+.title {
+  text-align: center;
+  justify-content: center;
 }
 
 /* Food Results Styling || dashboard.html || food_data.html */
 .entry {
   width: 100%;
   border-radius: 8px;
-  background-color: rgb(81, 238, 173);
   padding: 15px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  border: #540d6e solid 5px;
 }
 .entry img {
   width: 100%;
@@ -148,14 +115,12 @@ body::after {
   justify-content: center;
   width: 300px;
   padding: 0.5em;
-  border: #eb1e95 solid 5px;
 }
 
 .entry2 > h3, p {
   display: grid;
   align-items: center;
   justify-content: center;
-  border: #08BDBD solid 4px;
   text-decoration: none;
 }
 
@@ -188,4 +153,38 @@ body::after {
 .above { 
   position: absolute; top: -40px;
   color: #7AA354;
+}
+
+/* Footer Styling */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  background: none;
+  color:black;
+}
+
+.fa-youtube {
+  background: none;
+  color:black;
+}
+
+.fa-instagram {
+  background: none;
+  color:black;
+}
+
+.fa-facebook {
+  background-color: none;
+  color: black;
 }
