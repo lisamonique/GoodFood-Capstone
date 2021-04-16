@@ -25,31 +25,31 @@
     {% if user.is_authenticated %}
 
     <div class="header" id="myHeader">
-        
-        <h1>Header: {{ message }}</h1>
+        <div class="headerTitle">
+            <h1>GARDEN LIGHT</h1>   
+        </div>
         <div class="topNav">
             <nav class="navBar">
                 <a href="{% url 'plants:index' %}">Home</a>
-                <a href="#">YouTube</a>
                 <a href="{% url 'plants:aboutPage' %}">About</a>
                 <a href="{% url 'login_user' %}">Member Login</a>
                 <a href="{% url 'register' %}">Join Us</a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                </nav>
+            </nav>
         </div>
     </div>
-    <div>
-        <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
-        <h3><a href="{% url 'profile' %}">GO HOME</a></h3>
-        <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
+
+    <div class="stickyTopNav">
+        <a href="{% url 'plants:dashboard' %}">DASHBOARD</a> 
+        <a href="{% url 'profile' %}">Home</a>
+        <a style="float: right; " href="{% url 'logout_user' %}">logout</a>
+    </div>
+
+    <div class="plotTitle">
+        <h2>Watch your seeds blossom into plants!</h2>
+        <h4>Roll Your Mouse Across The Spaces</h4>   
     </div>
 
     <div class="plot">
-        <h2>Watch your seeds blossom into plants!</h2>
-        <h5>Roll Your Mouse Across The Spaces</h5>    
         <table class="innerplot">            
         <tr class="row1">
             <th>Row 1<br>Raspberry</th>

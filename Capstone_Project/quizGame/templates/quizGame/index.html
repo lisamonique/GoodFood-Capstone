@@ -23,46 +23,42 @@
 
 <body>
   {% if user.is_authenticated %}
-  <div>
-    <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
-    <h3><a href="{% url 'profile' %}">GO HOME</a></h3>
-    <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
+  <div class="stickyTopNav">
+    <a href="{% url 'plants:dashboard' %}">DASHBOARD</a> 
+    <a href="{% url 'profile' %}">Home</a>
+    <a style="float: right;" href="{% url 'logout_user' %}">logout</a> 
   </div>
 
-    <div class="header" id="myHeader">
-      <h1>GARDEN LIGHT</h1>
-        <div class="topNav">
-            <nav class="navBar">
-              <a href="{% url 'plants:index' %}">Home</a>
-              <a href="#">YouTube</a>
-              <a href="{% url 'plants:aboutPage' %}">About</a>
-              <a href="{% url 'login_user' %}">Member Login</a>
-              <a href="{% url 'register' %}">Join Us</a>
-              <a href="#" class="fa fa-youtube"></a>
-              <a href="#" class="fa fa-facebook"></a>
-              <a href="#" class="fa fa-instagram"></a>
-              <a href="#" class="fa fa-twitter"></a>
-            </nav>
-        </div>
+  <div class="header" id="myHeader">
+    <div class="headerTitle">
+        <h1>GARDEN LIGHT</h1>   
     </div>
+    <div class="topNav">
+        <nav class="navBar">
+            <a href="{% url 'plants:index' %}">Home</a>
+            <a href="{% url 'plants:aboutPage' %}">About</a>
+            <a href="{% url 'login_user' %}">Member Login</a>
+            <a href="{% url 'register' %}">Join Us</a>
+        </nav>
+    </div>
+</div>
 
-    <div class="message">
-      <h1>{{ message }}</h1>
-    </div>
-    <div id="app">
-      <div v-for="question in questions" class="flashcard">
-        <h3>[[question.question]]</h3>
-        <div v-for="answer in question.answers">
-          <input :id="answer.veggie_answer" type="radio" :name="question.question">
-          <label for="answer.veggie_answer">[[answer.veggie_answer]]</label>
-        </div>
+<!-- <h3>[[question.question]]</h3>
+    <div v-for="answer in question.answers">
+      <input :id="answer.veggie_answer" type="radio" :name="question.question">
+      <label for="answer.veggie_answer">[[answer.veggie_answer]]</label>
+    </div> -->
+
+<div id="app">
+  <div v-for="question in questions" class="flashcard">
+        
       </div>
     </div>
 
     <div class="message">
       <h1>{{ message }}</h1>
     </div>
-
+    
     <article class="flashcard">
       <input id="flashcard-1" type="checkbox"/>
       <label onload="getRandomWord()" id="app" for="flashcard-1">
@@ -76,7 +72,7 @@
 
         <div id="button">
           <button id="check">Check</button>
-          <button id="next">Next</button>
+          <button class="registerBtn2" id="next">Next</button>
         </div>
       </label>
     </article>
@@ -84,21 +80,5 @@
   </div>
 </div>
   {% endif %} 
-
-    <!-- <script>
-      window.onscroll = function() {myFunction()};
-      
-      var header = document.getElementById("myHeader");
-      var sticky = header.offsetTop;
-      
-      function myFunction() {
-          if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-          } else {
-          header.classList.remove("sticky");
-          }
-      }
-    </script> -->
-
 </body>
 </html>

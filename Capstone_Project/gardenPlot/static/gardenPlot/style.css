@@ -1,70 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 
-/* Header Styling */
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+/* TOP NAAAAV Styling */
+.stickyTopNav {
+  overflow: hidden;
+  background-color: #668859;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.stickyTopNav > a {
+  text-decoration: none;
+  color: #E9E8E2 ;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 body {
+  background-color: #E9E8E2;
+  color: #56523E;
+  height: 100vh;
+  display: block;
   height: 100%;
   margin: 0;
   font-family: 'Balsamiq Sans', cursive;
+  text-decoration: none;
+  text-decoration-color: #668859;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWpm4KTO64Bsgq79NnWT9KIi17p4KanmZZ8w&usqp=CAU");
 }
 
+/* Header Styling */
 .header {
-    padding: 10px 16px;
-    background: #08BDBD;
-    color: #f1f1f1;
-    text-align: center;
+  color: #E9E8E2;
+  padding: 10px 16px;
+  background-color: #668859;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 3.5em;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-  
-.sticky + .content {
-    padding-top: 102px;
+.headerTitle {
+  font-size: 25px;
+  padding-bottom: 1em;
 }
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-  }
+.topNav {
+
+}
   
-  .fa:hover {
-    opacity: 0.7;
-  }
-  
-  .fa-twitter {
-    background: none;
-    color:black;
-  }
-  
-  .fa-youtube {
-    background: none;
-    color:black;
-  }
-  
-  .fa-instagram {
-    background: none;
-    color:black;
+.navBar > a {
+  text-decoration: none;
+  color: #E9E8E2 ;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
-  .fa-facebook {
-    background-color: none;
-    color: black;
-  }
+/* Title STYLING */
 
+.plotTitle {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(199, 169, 226);
+  font-size: 20px;
+  padding-bottom: 1em;
+}
 
 /* Garden Plot Styling */
 table{
@@ -114,7 +123,7 @@ tr {
 }
 
 .row1:hover > td {
-  /* background-image: url("../images/Untitled1_20210412142606.png"), url('../images/Untitled1_20210412142618.png'), url('../images/Untitled1_20210412142626.png'), url('../images/Untitled1_20210412142632.png'), url('../images/Untitled1_20210412142638.png'); */
+  /* background-image: url("../images/Untitled1_20210412142606.png"); */
   background-repeat: no-repeat;
   background-size: 225%, 10%;
   background-position: center;
@@ -250,4 +259,39 @@ tr {
   100%{
     background-image: url('../gardenPlot/images/bellpepper5.png');
   }
+}
+
+
+/* FOOTER STYLING */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  background: none;
+  color:black;
+}
+
+.fa-youtube {
+  background: none;
+  color:black;
+}
+
+.fa-instagram {
+  background: none;
+  color:black;
+}
+
+.fa-facebook {
+  background-color: none;
+  color: black;
 }

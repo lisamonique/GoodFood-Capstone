@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Balsamiq Sans', cursive;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+/* TOP NAAAAV Styling */
+.stickyTopNav {
+  overflow: hidden;
+  background-color: #668859;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.stickyTopNav > a {
+  text-decoration: none;
+  color: #E9E8E2 ;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 body{
@@ -44,6 +61,18 @@ body{
   padding-right: 1em;
 }
 
+.bannerImage{
+  height: 35vh;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../users/images/banner_food_image.jpg")
+}
+
 /* Content Styling */
 .content {
   display: flex;
@@ -75,23 +104,67 @@ body{
   overflow: hidden;
 }
 
-
-/* navbar */
-/* .navbar h3 {
-  float:left
-}
-.navbar h3 > a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-} */
-
-
+/* Title Styling */
 .title {
   text-align: center;
   justify-content: center;
+  padding-bottom: 2em;
+}
+
+.registerBtn2 {
+  background-color: #668859; /* Green */
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  padding: 7px 14px;
+  width: 10%;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /*Safari*/
+  transition-duration: 0.4s;
+}
+.registerBtn2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.registerBtn {
+  width: 25%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0.5em;
+}
+
+/* Food Results Styling || dashboard.html || food_data.html */
+/* different header design styling */
+/* Header Styling */
+.header1 {
+  padding: 10px 16px;
+  background: #668859;
+  color: #E9E8E2;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 3em;
+  margin-bottom: 2em;
+}
+
+.headerTitle1 {
+  font-size: 25px;
+  padding-bottom: 1em;
+}
+
+.topNav1 {
+  padding-bottom: 1em;
+}
+  
+.navBar1 > a {
+  text-decoration: none;
+  color: #E9E8E2 ;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* Food Results Styling || dashboard.html || food_data.html */
@@ -141,18 +214,23 @@ body{
 
 /* Footer Styling */
  .footer {
-  height: 20vh;
+  height: 15vh;
   text-align: center;
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100vw;
   background-color: #7AA354;
+  background-image: url('/plants/static/plants/images/footer_image.jpg');
 }
 
 .above { 
-  position: absolute; top: -40px;
   color: #7AA354;
+}
+
+#edamam-badge {
+  position: relative;
+  bottom: 0;
+  float: right;
 }
 
 /* Footer Styling */

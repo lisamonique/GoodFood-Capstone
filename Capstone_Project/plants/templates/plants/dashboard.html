@@ -1,19 +1,31 @@
 {% extends 'plants/base.html' %}
 
 {% block plants %}
+<div class="header1" id="myHeader">
+    <div class="headerTitle1">
+        <h1>GARDEN LIGHT</h1>   
+    </div>
+    <div class="topNav1">
+        <nav class="navBar1">
+            <a href="{% url 'plants:index' %}">Home</a>
+            <a href="{% url 'plants:aboutPage' %}">About</a>
+            <a href="{% url 'login_user' %}">Member Login</a>
+            <a href="{% url 'register' %}">Join Us</a>
+        </nav>
+    </div>
+</div>
 <div id="recipeDataBase">
 
     {% if user.is_authenticated %}
-    <div class="navbar">
-        <h3>{{ user }} DASHBOARD</h23>
-        <h3><a href="{% url 'profile' %}">GO Home </a></h3>
-        <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
+    <div class="stickyTopNav">
+        <a href="{% url 'profile' %}">Home</a>
+        <a style="float: right;" href="{% url 'logout_user' %}">logout</a>
     </div>
 
     <div class="title">
-        <h3>Food Recipe Search</h3> 
-        <input type="text" v-model="userQuery"  type="text" placeholder="Search Your Recipe...">
-        <button v-on:click="searchMeals">Search</button> 
+        <h2>Food Recipe Search</h2> 
+        <input class="registerBtn" type="text" v-model="userQuery"  type="text" placeholder="Search Your Recipe...">
+        <button class="registerBtn2" v-on:click="searchMeals">Search</button> 
     </div>
     
     <div class="entry">
@@ -21,7 +33,7 @@
             <img v-bind:src="[[data?.recipe?.image]]" alt="Food Image">
             <div class="entry2">
                 <h3>[[data?.recipe?.label]]</h3> 
-                <p><a v-bind:href="data?.recipe?.url">Get Recipe!</a></p>
+                <a v-bind:href="data?.recipe?.url">Get Recipe!</a>
             </div>
         </div>    
     </div>

@@ -1,20 +1,36 @@
 {% extends 'plants/base.html' %}
 
 {% block plants %}
+<div class="header1" id="myHeader">
+    <div class="headerTitle1">
+        <h1>GARDEN LIGHT</h1>   
+    </div>
+    <div class="topNav1">
+        <nav class="navBar1">
+            <a href="{% url 'plants:index' %}">Home</a>
+            <a href="{% url 'plants:aboutPage' %}">About</a>
+            <a href="{% url 'login_user' %}">Member Login</a>
+            <a href="{% url 'register' %}">Join Us</a>
+        </nav>
+    </div>
+</div>
 <div id="foodDataBase">
 
-    <div class="navbar">
-        <h3>MEMBER HOME</h3>
-        <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
-        <h3><a href="{% url 'profile' %}">GO HOME</a></h3>
-        <h3 style="float:right"><a href="{% url 'logout_user' %}">logout</a> </h3>
+    <div class="stickyTopNav">
+        <a href="{% url 'plants:dashboard' %}">DASHBOARD</a> 
+        <a href="{% url 'profile' %}">Home</a>
+        <a style="float: right;" href="{% url 'logout_user' %}">logout</a>
     </div>
 
     <div class="title">
-        <h1>[[message]]</h1>
-        <h2>Vegetable & Fruit Search</h2>  
-        <input type="text" v-model="userQuery"  type="text" placeholder="Search for food...">
-        <button v-on:click="searchIngr">Search</button>
+        <div class="titleHead">
+            <h1>[[message]]</h1>
+            <h3>Vegetable & Fruit Search</h3>   
+        </div>
+        <div class="search">
+            <input class="registerBtn" type="text" v-model="userQuery"  type="text" placeholder="Type fruit or veggie...">
+            <button class="registerBtn2" v-on:click="searchIngr">Search</button>   
+        </div>
         <h4>"[[ingrResult.length]]" SEARCH RESULTS FOUND</h4>  
     </div>
     

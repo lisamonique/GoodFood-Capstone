@@ -3,7 +3,6 @@
 {% block plants %}
 <!-- <body> -->
     <div class="bannerImage">
-        <img src="{% static 'plants/images/banner_food_image.jpg' %}" alt="banner">
         
     </div>
     <div class="content">
@@ -14,8 +13,10 @@
             <a href="{% url 'quizGame:index' %}">Flash Cards<img src="{% static 'plants/images/flashacard.png' %}" alt="flashcard"></a>
         </section>
         <section class="options">
-            <a href="{% url 'plants:foodData' %}">Food Library</a>
-            <img src="{% static 'plants/images/book.webp' %}" alt="">
+            {% if error %}
+            {{error}}
+            {% endif %}
+            <a href="{% url 'plants:foodData' %}">Food Library<img src="{% static 'plants/images/library4.png' %}" alt="fruit"></a>
         </section>
         <section class="options">
             {% if error %}

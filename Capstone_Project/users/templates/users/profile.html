@@ -4,26 +4,26 @@
 
 <div>
    {% if user.is_authenticated %}
-   <div>
-       <h2>MEMBER HOME</h2>
-       <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
-       <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
-   </div>
+   <div class="stickyTopNav">
+        <a href="{% url 'plants:dashboard' %}">DASHBOARD</a>
+        <a style="float: right;" href="{% url 'logout_user' %}">logout</a>
+    </div>
+    <div class="bannerImage">
+        <H1 class="bannerImage2">MEMBER HOME</H1>
+    </div>
+    <div class="welcome">
+        <h1>HELLO, {{ user }}!</h1>    
+    </div>
     
-    <h1>HELLO, {{ user }}!</h1>
-    <hr>
     <div class="content1">
         <section class="options">
-            <p>Wanna Play?</p>
-            <a href="{% url 'quizGame:index' %}">CLICK ME</a>
+            <a href="{% url 'quizGame:index' %}">Flash Cards<img src="{% static 'plants/images/flashacard.png' %}" alt="flashcard"></a>
         </section>
         <section class="options">
-            <p>Learn More</p>
-            <a href="{% url 'plants:foodData' %}">open</a>
+            <a href="{% url 'plants:foodData' %}">Food Library<img src="{% static 'plants/images/library4.png' %}" alt="fruit"></a>
         </section>
         <section class="options">
-            <p>Fruits & Vegetables</p>
-            <a href="{% url 'gardenPlot:index' %}">CLICK ME</a>
+            <a href="{% url 'gardenPlot:index' %}">Garden Plot<img src="{% static 'plants/images/garden_plot.png' %}" alt="garden plot"></a>
         </section>
     </div>
     
