@@ -64,7 +64,7 @@ body{
 .bannerImage{
   height: 35vh;
   color: white;
-  font-size: 20px;
+  font-size: 60px;
   text-align: center;
   text-transform: uppercase;
   padding: 0.5em;
@@ -177,6 +177,7 @@ body{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  float: left;
 }
 .entry img {
   width: 100%;
@@ -212,20 +213,31 @@ body{
   align-self: flex-start;
 }
 
-/* Footer Styling */
- .footer {
-  height: 15vh;
-  text-align: center;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  background-color: #7AA354;
-  background-image: url('/plants/static/plants/images/footer_image.jpg');
+.checklist {
+  height: 50px;
+  float: right;
 }
 
-.above { 
-  color: #7AA354;
+/* notes styling */
+.notes {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+.links{
+  padding-top: 2em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+}
+/* Footer Styling */
 
 #edamam-badge {
   position: relative;
@@ -233,7 +245,26 @@ body{
   float: right;
 }
 
-/* Footer Styling */
+/* footer {
+  width: 100vw;
+  display: inline-block;
+  margin: 2em 0;
+  height: 70px;
+  background-color: #999;
+  position: absolute;
+  bottom: 0;
+}
+
+.copyright {
+  width: 50%;
+  float: left;
+}
+
+.social {
+  width: 50%;
+  float: right;
+}
+
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -265,4 +296,4 @@ body{
 .fa-facebook {
   background-color: none;
   color: black;
-}
+} */

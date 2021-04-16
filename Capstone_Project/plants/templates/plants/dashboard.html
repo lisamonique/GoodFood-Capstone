@@ -1,5 +1,5 @@
 {% extends 'plants/base.html' %}
-
+{% load static %}
 {% block plants %}
 <div class="header1" id="myHeader">
     <div class="headerTitle1">
@@ -21,7 +21,9 @@
         <a href="{% url 'profile' %}">Home</a>
         <a style="float: right;" href="{% url 'logout_user' %}">logout</a>
     </div>
-
+    <div class="checklist">
+        <img src="{% static 'plants/images/checklist.png' %}" alt="checklist">
+    </div>
     <div class="title">
         <h2>Food Recipe Search</h2> 
         <input class="registerBtn" type="text" v-model="userQuery"  type="text" placeholder="Search Your Recipe...">
@@ -37,6 +39,8 @@
             </div>
         </div>    
     </div>
+
+    
 
     <footer>
         <div id="edamam-badge" data-color="white"></div>    
