@@ -1,6 +1,7 @@
 {% extends 'plants/base.html' %}
 {% load static %}
-{% block plants %}
+
+{% block header %}
 <div class="header1" id="myHeader">
     <div class="headerTitle1">
         <h1>GARDEN LIGHT</h1>   
@@ -14,16 +15,19 @@
         </nav>
     </div>
 </div>
+{% endblock %}
+
+{% block plants %}
+
+{% if user.is_authenticated %}
 <div id="recipeDataBase">
 
-    {% if user.is_authenticated %}
+    
     <div class="stickyTopNav">
         <a href="{% url 'profile' %}">Home</a>
         <a style="float: right;" href="{% url 'logout_user' %}">logout</a>
     </div>
-    <div class="checklist">
-        <img src="{% static 'plants/images/checklist.png' %}" alt="checklist">
-    </div>
+    
     <div class="title">
         <h2>Food Recipe Search</h2> 
         <input class="registerBtn" type="text" v-model="userQuery"  type="text" placeholder="Search Your Recipe...">
@@ -40,11 +44,13 @@
         </div>    
     </div>
 
-    
-
     <footer>
         <div id="edamam-badge" data-color="white"></div>    
     </footer>
-    {% endif %}
+    
 </div>
+<div class="checklist">
+    <img src="{% static 'plants/images/checklist.png' %}" alt="checklist">
+</div>
+{% endif %}
 {% endblock %}

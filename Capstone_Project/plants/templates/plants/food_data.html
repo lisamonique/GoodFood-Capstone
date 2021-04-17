@@ -1,6 +1,7 @@
 {% extends 'plants/base.html' %}
+{% load static %}
 
-{% block plants %}
+{% block header %}
 <div class="header1" id="myHeader">
     <div class="headerTitle1">
         <h1>GARDEN LIGHT</h1>   
@@ -14,6 +15,10 @@
         </nav>
     </div>
 </div>
+{% endblock %}
+
+{% block plants %}
+
 <div id="foodDataBase">
 
     <div class="stickyTopNav">
@@ -47,8 +52,9 @@
         </div>
     </div>
 
-    <footer>
-        <div id="edamam-badge" data-color="white"></div>    
-    </footer>
+    
 </div>
+<footer>
+    <div id="edamam-badge" data-color="white"></div>    
+</footer>
 {% endblock %}

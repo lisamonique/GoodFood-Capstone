@@ -25,7 +25,7 @@
   }
   
 /* Flashcard Styling */
-html,
+/* html,
 body {
     background-color: #E9E8E2;
     color: #56523E;
@@ -36,7 +36,22 @@ body {
     font-family: 'Balsamiq Sans', cursive;
     text-decoration: none;
     text-decoration-color: #668859;
-}
+} */
+html, body{
+    min-height: 100%;
+  }
+  
+  body{
+    background-color: #E9E8E2;
+    color: #56523E;
+    height: 100vh;
+    display: block;
+    /* height: 100%; */
+    margin: 0;
+    font-family: 'Balsamiq Sans', cursive;
+    text-decoration: none;
+    text-decoration-color: #668859;
+  }
 
 .message{
     text-align: center;
@@ -199,6 +214,15 @@ button:hover {
 }
 
 /* FOOter STYLING */
+footer {
+    position: sticky;
+    bottom: 1em;
+    width: 100vw;
+    margin: 2em 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2em;
+  }
 .fa {
     padding: 20px;
     font-size: 30px;

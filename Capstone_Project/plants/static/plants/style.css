@@ -24,16 +24,26 @@
   padding-right: 1em;
 }
 
+html, body{
+  min-height: 100%;
+}
 body{
   background-color: #E9E8E2;
   color: #56523E;
   height: 100vh;
   display: block;
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
   font-family: 'Balsamiq Sans', cursive;
   text-decoration: none;
   text-decoration-color: #668859;
+}
+
+#foodDataBase{
+  min-height: 100%;
+  position: relative;
+  overflow: scroll;
+  margin-top: 1.5em;
 }
 
 /* Header Styling */
@@ -245,14 +255,14 @@ body{
   float: right;
 }
 
-/* footer {
+footer {
+  position: sticky;
+  bottom: 1em;
   width: 100vw;
-  display: inline-block;
   margin: 2em 0;
-  height: 70px;
-  background-color: #999;
-  position: absolute;
-  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2em;
 }
 
 .copyright {
@@ -296,4 +306,4 @@ body{
 .fa-facebook {
   background-color: none;
   color: black;
-} */
+}
