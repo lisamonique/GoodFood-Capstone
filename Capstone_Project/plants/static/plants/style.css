@@ -307,3 +307,8 @@ footer {
   background-color: none;
   color: black;
 }
+.aboutPage1 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
