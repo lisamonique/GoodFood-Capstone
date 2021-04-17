@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'goodfoodrealfood.herokuapp.com',
-    'www.garden-light.com',
-    'garden-light.com',
+    'www.garden-light.org',
+    'garden-light.org',
 ]
 
 
