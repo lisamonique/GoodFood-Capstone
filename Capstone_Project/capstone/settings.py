@@ -26,9 +26,9 @@ SECRET_KEY = 'f!8=0*-7g8e7$g%8nk@h4jr=e38wn=8tsd0u@@wj_mtwhrq299'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'goodfoodrealfood.herokuapp.com'
-    'www.garden-light.com'
-    'garden-light.com'
+    'goodfoodrealfood.herokuapp.com',
+    'www.garden-light.com',
+    'garden-light.com',
 ]
 
 
