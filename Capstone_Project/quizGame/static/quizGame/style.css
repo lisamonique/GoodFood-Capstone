@@ -1,17 +1,57 @@
-/* Flashcard Styling */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
-html,
-body {
-    background: #ffffff;
-    border: 0px;
+/* TOP NAAAAV Styling */
+.stickyTopNav {
+    overflow: hidden;
+    background-color: #668859;
+    position: fixed;
+    top: 0;
     width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  .stickyTopNav > a {
+    text-decoration: none;
+    color: #E9E8E2 ;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+/* Flashcard Styling */
+/* html,
+body {
+    background-color: #E9E8E2;
+    color: #56523E;
+    height: 100vh;
+    display: block;
     height: 100%;
-}
+    margin: 0;
+    font-family: 'Balsamiq Sans', cursive;
+    text-decoration: none;
+    text-decoration-color: #668859;
+} */
+html, body{
+    min-height: 100%;
+  }
+  
+  body{
+    background-color: #E9E8E2;
+    color: #56523E;
+    height: 100vh;
+    display: block;
+    /* height: 100%; */
+    margin: 0;
+    font-family: 'Balsamiq Sans', cursive;
+    text-decoration: none;
+    text-decoration-color: #668859;
+  }
 
 .message{
     text-align: center;
@@ -63,7 +103,7 @@ article.flashcard section {
 
 article.flashcard section.front {
     color: black;
-    background: #eeb902;
+    background: #F5E663;
     height: 100%;
     font-weight: bold;
     font-size: 3em;
@@ -71,65 +111,60 @@ article.flashcard section.front {
 }
 
 article.flashcard section.back {
-    color: blanchedalmond;
-    background: #0ead69;
+    color: black;
+    /* color: blanchedalmond; */
+    background: #AF42AE;
     height: 0%;
     font-weight: bold;
     font-size: 3em;
 }
 
-
 /* Header Styling */
 .header {
     padding: 10px 16px;
-    background: #08BDBD;
-    color: #f1f1f1;
+    background: #668859;
+    color: #E9E8E2;
     text-align: center;
-}
+    font-size: 18px;
+    padding-top: 3em;
+    margin-bottom: 2em;
+  }
   
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.sticky + .content {
-    padding-top: 102px;
-}
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
+  .headerTitle {
+    font-size: 25px;
+    padding-bottom: 1em;
+  }
+  
+  .topNav {
+    padding-bottom: 1em;
+  }
+    
+  .navBar > a {
     text-decoration: none;
-    margin: 5px 2px;
-}
+    color: #E9E8E2 ;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-twitter {
-    background: none;
-    color:black;
-}
-
-.fa-youtube {
-    background: none;
-    color:black;
-}
-
-.fa-instagram {
-    background: none;
-    color:black;
-}
-
-.fa-facebook {
-    background-color: none;
-    color: black;
-}
-
+/* Input & button styling */
+  
+  .registerBtn2 {
+    background-color: #668859; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 14px;
+    width: 25%;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /*Safari*/
+    transition-duration: 0.4s;
+  }
+  .registerBtn2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  
 /* Select Styling */
 /* #generate {
     text-align: center;
@@ -176,4 +211,47 @@ button:hover {
 
 #check {
     display: none;
+}
+
+/* FOOter STYLING */
+footer {
+    position: sticky;
+    bottom: 1em;
+    width: 100vw;
+    margin: 2em 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2em;
+  }
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+    background: none;
+    color:black;
+}
+
+.fa-youtube {
+    background: none;
+    color:black;
+}
+
+.fa-instagram {
+    background: none;
+    color:black;
+}
+
+.fa-facebook {
+    background-color: none;
+    color: black;
 }

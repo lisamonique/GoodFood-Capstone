@@ -1,45 +1,60 @@
 {% extends 'plants/base.html' %}
+{% load static %}
+
+{% block header %}
+<div class="header1" id="myHeader">
+    <div class="headerTitle1">
+        <h1>GARDEN LIGHT</h1>   
+    </div>
+    <div class="topNav1">
+        <nav class="navBar1">
+            <a href="{% url 'plants:index' %}">Home</a>
+            <a href="{% url 'plants:aboutPage' %}">About</a>
+            <a href="{% url 'login_user' %}">Member Login</a>
+            <a href="{% url 'register' %}">Join Us</a>
+        </nav>
+    </div>
+</div>
+{% endblock %}
 
 {% block plants %}
+
 <div id="foodDataBase">
 
+    <div class="stickyTopNav">
+        <a href="{% url 'plants:dashboard' %}">DASHBOARD</a> 
+        <a href="{% url 'profile' %}">Home</a>
+        <a style="float: right;" href="{% url 'logout_user' %}">logout</a>
+    </div>
 
-    <h1>Vegetable & Fruit Search</h1>
-    <h2>[[message]]</h2>
-    <br>
-    <div>
-        <div>
-            <input type="text" v-model="userQuery"  type="text" placeholder="Search for food...">
-            <button v-on:click="searchIngr">Search</button> 
+    <div class="title">
+        <div class="titleHead">
+            <h1>[[message]]</h1>
+            <h3>Vegetable & Fruit Search</h3>   
+        </div>
+        <div class="search">
+            <input class="registerBtn" type="text" v-model="userQuery"  type="text" placeholder="Type fruit or veggie...">
+            <button class="registerBtn2" v-on:click="searchIngr">Search</button>   
+        </div>
+        <h4>"[[ingrResult.length]]" SEARCH RESULTS FOUND</h4>  
+    </div>
+    
+    <div class="entry">
+        <div class="entry1" v-for="(data, i) in ingrResult" v-if="ingrResult.length > 0">
+            <img v-bind:src="[[data?.food?.image]]" alt="Food Image">
+            <div class="entry2">
+                <h3>[[data?.food?.label]]</h2>
+                <p>Energy: [[data?.food?.nutrients?.ENERC_KCAL]]</p>
+                <p>Carbs: [[data?.food?.nutrients?.CHOCDF]]</p>
+                <p>Protein: [[data?.food?.nutrients?.PROCNT]]</p>
+                <p>Fat: [[data?.food?.nutrients?.FAT]]</p>
+            </div>
         </div>
     </div>
-    <!-- <h2>"[[ingrResult.length]]" SEARCH RESULTS FOUND</h2>
-    <br>
-    <h4>You searched for: [[userQuery]]</h4>
-    <br>
-    <h5><a href="{% url 'plants:index' %}">Home</a> > <a href="#">Search results for [[userQuery]]</a></h5>
-    <br> -->
 
-    <!-- <div>
-        <div>
-            <h2>Title of "Food Searched"</h2>   
-            <p>Information about "food searched". Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dicta.</p>
-            <a href="#">More Info</a>
-        </div>
-    </div> -->
-    <br>
-
-    <div class="wrapper">
-        <div class="entry">
-            <figure v-for="(data, i) in ingrResult">
-                <img v-bind:src="[[data?.food?.image]]" alt="Food Image">
-                <a href="#"><figcaption>[[data?.food?.label]]</figcaption></a> 
-                <button id="add">+</button>
-            </figure>
-        </div>
-    </div>
-    <footer>
-        <div id="edamam-badge" data-color="white"></div>    
-    </footer>
+    
 </div>
+<footer>
+    <div id="edamam-badge" data-color="white"></div>    
+</footer>
 {% endblock %}

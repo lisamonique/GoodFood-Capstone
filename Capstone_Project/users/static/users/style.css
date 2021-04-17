@@ -1,7 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Balsamiq Sans', cursive;
+}
+html, body{
+  min-height: 100%;
+}
+
+/* TOP NAAAAV Styling */
+.stickyTopNav {
+  overflow: hidden;
+  background-color: #668859;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.stickyTopNav > a {
+  text-decoration: none;
+  color: #E9E8E2 ;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+body{
+  background-color: #E9E8E2;
+  color: #56523E;
+  height: 100vh;
+  display: block;
+  /* height: 100%; */
+  margin: 0;
+  font-family: 'Balsamiq Sans', cursive;
+  text-decoration: none;
+  text-decoration-color: #668859;
+}
+
+/* Banner image styling */
+.bannerImage{
+  height: 35vh;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../users/images/banner_food_image.jpg")
+}
+
+.bannerImage2{
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:whitesmoke;
+}
+
+/* Header Styling */
+.header {
+  padding: 10px 16px;
+  background: #668859;
+  color: #E9E8E2;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 3em;
+  margin-bottom: 2em;
+}
+
+.headerTitle {
+  font-size: 25px;
+  padding-bottom: 1em;
+}
+
+.topNav {
+  padding-bottom: 1em;
+}
+  
+.navBar > a {
+  text-decoration: none;
+  color: #E9E8E2 ;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .message {
@@ -11,7 +95,7 @@
     border: black solid 8px;
     border-radius: 1em;
     overflow: hidden;
-    line-height: 68px;
+    margin-bottom: 2em;
 }
   
 .section1 {
@@ -21,39 +105,364 @@
     background: beige;
     display: grid;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     padding: 0.7em;
+    line-height: 70px;
 }
   
 .section2 {
-    float:left;
+    float:right;
     width:50%;
     overflow:hidden;
     background: white;
     display: grid;
     padding: 0.5em;
     text-align: left;
-    font-size: 20px;
+    font-size: 30px;
 }
 
-.header {
-    padding: 10px 16px;
-    background: #08BDBD;
-    color: #f1f1f1;
-    text-align: center;
+.section4 {
+  width:100%;
+  overflow:hidden;
+  background: white;
+  display: grid;
+  padding: 0.5em;
+  text-align: left;
+  font-size: 30px;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+.content {
+  width: 35vw;
+  height: 40vh;
+  margin: auto;
+  border: black solid 6px;
+  border-radius: 1em;
+  overflow: hidden;
 }
+
+.loginregister{
+  height: 100%;
+  margin: 0;
+  font-family: 'Balsamiq Sans', cursive;
+  background-image: url("https://media.istockphoto.com/photos/healthy-fresh-rainbow-colored-fruits-and-vegetables-background-picture-id1208790371?k=6&m=1208790371&s=612x612&w=0&h=FCAj7paMmtAYe4W-8j12fSh9fe2Uf1yt7CItAzMNLTA=");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* CONTENT STYLING */
+.welcome > h1 {
+  padding-top: 1em;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.content1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  background-color: #540d6e;
+  width: 100vh;
+  min-height: 50vh;
+  margin: 50px;
+  color: whitesmoke;
+  text-align: center;
+  line-height: 175px;
+  font-size: 45px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(204, 48, 243, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+ 
+.options > a {
+  text-decoration: none; 
+}
+
+.options > img {
+  overflow: hidden;
+}
+
+hr {
+  border: 5px dotted plum;
+}
+.seed {
+  padding-top: 2em;
+  font-size: 35px;
+  text-align: center;
+}
+
+/* SEED STYLING */
+
+.plot {
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerplot {
+  width: 50%;
+}
+
+.one {
+  background-image: url('../users/images/Apple_seeds.jpg');
+  width: 75%;
+  height: 300px;
+  background-repeat: no-repeat; 
+  background-size: 100%, 10%;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.one:hover {
+  background-image: url('../users/images/apple.jpg');
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 300px;
+  padding: 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%, 10%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.two {
+  background-image: url('../users/images/beet_seed.jpg');
+  width: 75%;
+  height: 300px;
+  background-repeat: no-repeat; 
+  background-size: 100%, 10%;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.two:hover {
+  background-image: url('../users/images/beets.jpg');
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 300px;
+  padding: 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%, 10%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.three {
+  background-image: url('../users/images/broccoli_seed.jpg');
+  width: 75%;
+  height: 300px;
+  background-repeat: no-repeat; 
+  background-size: 100%, 10%;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.three:hover {
+  background-image: url('../users/images/broccoli.jpg');
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 300px;
+  padding: 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%, 10%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.four {
+  background-image: url('../users/images/collard_seed.jpg');
+  width: 75%;
+  height: 300px;
+  background-repeat: no-repeat; 
+  background-size: 100%, 10%;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.four:hover {
+  background-image: url('../users/images/collard.jpeg');
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 300px;
+  padding: 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%, 10%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.five {
+  background-image: url('../users/images/corn_seed.jpeg');
+  width: 75%;
+  height: 300px;
+  background-repeat: no-repeat; 
+  background-size: 100%, 10%;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.five:hover {
+  background-image: url('../users/images/corn.jpg');
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 300px;
+  padding: 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%, 10%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.six {
+  background-image: url('../users/images/lettuce_seed.jpg');
+  width: 75%;
+  height: 300px;
+  background-repeat: no-repeat; 
+  background-size: 100%, 10%;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.six:hover {
+  background-image: url('../users/images/oakleaf_lettuce.jpg');
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 300px;
+  padding: 0.5em;
+  background-repeat: no-repeat;
+  background-size: 100%, 10%;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* Register Styling */
+/* Right side */
+
+form {
+  display: grid;
+  align-items: left;
   
-.sticky + .content {
-    padding-top: 102px;
 }
 
-.fa {
+.registerBtn {
+  width: 50%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #4CAF50;
+}
+
+.registerBtn2 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 14px;
+  width: 25%;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /*Safari*/
+  transition-duration: 0.4s;
+}
+.registerBtn2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.space > input {
+  display: inline-block;
+}
+
+/* profile PAGE STYLING */
+  /* Body Styling */
+  .content1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .options {
+    background-color: #540d6e;
+    width: 100vh;
+    min-height: 50vh;
+    margin: 50px;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 175px;
+    font-size: 45px;
+    background: linear-gradient(
+      to right bottom,
+      rgba(204, 48, 243, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+  }
+
+  /* FOOTER STYLING */
+
+  footer {
+    position: sticky;
+    bottom: 1em;
+    width: 100vw;
+    margin: 2em 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2em;
+  }
+  
+  .fa {
     padding: 20px;
     font-size: 30px;
     width: 50px;
@@ -85,65 +494,3 @@
     background-color: none;
     color: black;
   }
-
-.content {
-display: flex;
-justify-content: center;
-background-color: DodgerBlue;
-background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-}
-
-.options {
-  border-radius: 1.2em;
-  background-color: #540d6e;
-  width: 100vh;
-  min-height: 50vh;
-  margin: 50px;
-  color: whitesmoke;
-  text-align: center;
-  line-height: 175px;
-  font-size: 45px;
-  background: linear-gradient(
-    to right bottom,
-    rgba(204, 48, 243, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-}
-
-.square1, .square2 {
-  border-radius: 0.5em;
-  background: white;
-  background-color: #540d6e;
-  width: 30vh;
-  height: 25vh;
-  background: linear-gradient(
-    to right bottom,
-    rgba(204, 48, 243, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-  border-radius: 2rem;
-  /* position: absolute; */
-}
-
-.square1 {
-  top: 50%;
-  right: 25%;
-}
-.square2 {
-  bottom: 15%;
-  left: 25%;
-}
-
-.summary {
-  display: grid;
-}
-
-.loginregister{
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url("https://media.istockphoto.com/photos/healthy-fresh-rainbow-colored-fruits-and-vegetables-background-picture-id1208790371?k=6&m=1208790371&s=612x612&w=0&h=FCAj7paMmtAYe4W-8j12fSh9fe2Uf1yt7CItAzMNLTA=");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}

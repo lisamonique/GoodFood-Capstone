@@ -2,14 +2,13 @@ let foodDataBase = new Vue({
     el: "#foodDataBase",
     delimiters: ['[[', ']]'],
     data: {
-        message: 'Food Database',
+        message: 'FOOD - LIBRARY',
         userQuery: '',
         categories: '',
         selectedCategory: '',
-        ingrResult: [{
-            label: '',
-            image: ''
-        }]
+        ingrResult: [
+        
+        ]
     },
     methods: {
         searchIngr: async function() {
@@ -21,7 +20,7 @@ let foodDataBase = new Vue({
                     categoryLabel: this.selectedCategory
                 }
             })
-            // console.log(response.data.hints)
+            console.log(response.data.hints)
             this.ingrResult = response.data.hints
         }
     },
@@ -39,7 +38,7 @@ let recipeDataBase = new Vue({
     el: "#recipeDataBase",
     delimiters: ['[[', ']]'],
     data: {
-        message: 'Recipe/Meals Database',
+        message: 'Food Recipe Search',
         userQuery: '',
         categories: '',
         selectedCategory: '',

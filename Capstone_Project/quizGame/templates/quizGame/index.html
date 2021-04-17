@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcard Quiz Game</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <!-- Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- Axios -->
@@ -19,32 +23,42 @@
 
 <body>
   {% if user.is_authenticated %}
-  <div>
-    <h3><a href="{% url 'logout_user' %}">logout</a> </h3>
-    <h3><a href="{% url 'plants:dashboard' %}">DASHBOARD</a></h3> 
+  <div class="stickyTopNav">
+    <a href="{% url 'plants:dashboard' %}">DASHBOARD</a> 
+    <a href="{% url 'profile' %}">Home</a>
+    <a style="float: right;" href="{% url 'logout_user' %}">logout</a> 
   </div>
 
-    <div class="header" id="myHeader">
-      <h1>Header: {{ message }}</h1>
-        <div class="topNav">
-            <nav class="navBar">
-              <a href="{% url 'plants:index' %}">Home</a>
-              <a href="#">YouTube</a>
-              <a href="{% url 'plants:aboutPage' %}">About</a>
-              <a href="{% url 'login_user' %}">Member Login</a>
-              <a href="{% url 'register' %}">Join Us</a>
-              <a href="#" class="fa fa-youtube"></a>
-              <a href="#" class="fa fa-facebook"></a>
-              <a href="#" class="fa fa-instagram"></a>
-              <a href="#" class="fa fa-twitter"></a>
-            </nav>
-        </div>
+  <div class="header" id="myHeader">
+    <div class="headerTitle">
+        <h1>GARDEN LIGHT</h1>   
+    </div>
+    <div class="topNav">
+        <nav class="navBar">
+            <a href="{% url 'plants:index' %}">Home</a>
+            <a href="{% url 'plants:aboutPage' %}">About</a>
+            <a href="{% url 'login_user' %}">Member Login</a>
+            <a href="{% url 'register' %}">Join Us</a>
+        </nav>
+    </div>
+  </div>
+
+<!-- <h3>[[question.question]]</h3>
+    <div v-for="answer in question.answers">
+      <input :id="answer.veggie_answer" type="radio" :name="question.question">
+      <label for="answer.veggie_answer">[[answer.veggie_answer]]</label>
+    </div> -->
+
+<div id="app">
+  <div v-for="question in questions" class="flashcard">
+        
+      </div>
     </div>
 
     <div class="message">
       <h1>{{ message }}</h1>
     </div>
-
+    
     <article class="flashcard">
       <input id="flashcard-1" type="checkbox"/>
       <label onload="getRandomWord()" id="app" for="flashcard-1">
@@ -58,70 +72,25 @@
 
         <div id="button">
           <button id="check">Check</button>
-          <button id="next">Next</button>
+          <button class="registerBtn2" id="next">Next</button>
         </div>
       </label>
     </article>
     
   </div>
 </div>
-<footer class="footer">
-  <img class="above" src='https://lh3.googleusercontent.com/proxy/l3NfZbKHK_sSZaw034vwF7xlBcAHQke5ZGlG3wzFMzXkCCZ3kWtA0e73vrW2_nZnmdUP75arXDNvBl8EioqfqZiejWww1R9DC67bYiIdRagBltq7rGHCBeh_gME-HrNZ5KIWJVt9' alt="Farm Footer">  
-  <p>Footer</p>
-  <div>
-      <h3>About</h3>   
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod minima neque enim facilis corporis explicabo quos non distinctio iure, quasi incidunt ducimus optio ex quisquam? Consequuntur, sapiente id. Perspiciatis, libero!</p>
-      <a href="{% url 'plants:aboutPage' %}">READ MORE</a>
+<!-- <footer>
+  <div class="copyright">
+    <p>&copy 2021 - GARDEN LIGHT</p>
   </div>
-  <div>
-      <h3>Information</h3>
-      <ul>
-          <li><a href="#">Legal Notice</a></li>
-          <li><a href="#">Lorem, ipsum.</a></li>
-          <li><a href="#">Lorem, ipsum.</a></li>
-          <li><a href="#">Lorem, ipsum dolor.</a></li>
-          <li><a href="#">Lorem, ipsum.</a></li>
-      </ul>
-  </div>
-  <hr>
-  <div>
-      <p class="copyright">Copyright ©2021 - All Rights. Reserved</p>    
-  </div>
-  <div>
-      <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Site Map</a></li>
-      </ul>
-  </div>
-  <div class="siteinfo">
-      <h3>Get In</h3>
+  <div class="social">
+      <a href="#" class="support">Contact Us</a>
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
       <a href="#" class="fa fa-youtube"></a>
       <a href="#" class="fa fa-instagram"></a>
   </div>
-</footer>
-  {% else %}
-  <a href="{% url 'login_user' %}">Login</a>
-  <a href="{% url 'register' %}">Sign Up</a>
+</footer> -->
   {% endif %} 
-
-    <script>
-      window.onscroll = function() {myFunction()};
-      
-      var header = document.getElementById("myHeader");
-      var sticky = header.offsetTop;
-      
-      function myFunction() {
-          if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-          } else {
-          header.classList.remove("sticky");
-          }
-      }
-    </script>
-
 </body>
 </html>

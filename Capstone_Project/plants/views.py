@@ -1,4 +1,6 @@
 from django.http import response, JsonResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 from django.shortcuts import render
 import requests
 import json
@@ -7,25 +9,33 @@ import json
 
 def index(request):
     context = {
-        'message': 'Welcome to GoodFood RealFood'
+        'message': 'GARDEN LIGHT'
     }
     return render(request, 'plants/index.html', context)
 
 def aboutPage(request):
     context = {
-        "message": "GoodFood Mission"
+        "message": "GARDEN LIGHT"
     }
     return render(request, 'plants/about.html', context)
 
 def foodData(request):
+    if request.method == "GET":
+        error = request.GET.get('error', '')
+
     context = {
-        "message": 'GoodFood Search'
+        "message": 'GARDEN LIGHT',
+        'error': error
     }
-    return render(request, 'plants/food_data.html', context)
+    if request.user.is_authenticated:
+        return render(request, 'plants/food_data.html', context)
+    else:
+        return HttpResponseRedirect(reverse('login_user'))
+  
 
 def dashboard(request):
     context = {
-        'message': "GoodFood Dashboard"
+        'message': "GARDEN LIGHT"
     }
     return render(request, 'plants/dashboard.html', context)
 

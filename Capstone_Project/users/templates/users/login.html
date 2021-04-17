@@ -6,12 +6,18 @@
         {% if error %}
         {{error}}
         {% endif %}
-        <form action="{% url 'login_user' %}" method="post">
-            {% csrf_token %}
-            <input type="text" name="username" placeholder="Username: " value="{{username}}">
-            <input type="password" name="password" placeholder="Password: ">
-            <input type="submit" value="Login">
-        </form>
+        <div class="section4">
+            <form action="{% url 'login_user' %}" method="post">
+                {% csrf_token %}
+                <label for="username">Username</label>
+                <input class="registerBtn" type="text" name="username" placeholder="Username: " value="{{username}}">
+                <label for="pword">Password</label>
+                <input class="registerBtn" type="password" name="password" placeholder="Password: ">
+                <input class="registerBtn2" type="submit" value="Login">
+                <input class="registerBtn2" type="reset" value="Reset">
+            </form>   
+        </div>
+        
     </div>  
 </body>
 {% endblock %}
